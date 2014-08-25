@@ -1,0 +1,503 @@
+#+TITLE: COS 371, 372, 471, 472---Software Studio
+#+DATE: Fall, 2014
+
+#+STARTUP: indent
+#+OPTIONS: toc:nil author:nil ':t
+
+#+LATEX_CLASS: syllabus
+#+LATEX_HEADER: \usepackage{booktabs}
+#+LATEX_HEADER: \usepackage[margin=1.5in]{geometry}
+#+LATEX_HEADER: \usepackage{lastpage}
+#+LATEX_HEADER: \usepackage{fancyhdr}
+#+LATEX_HEADER: \pagestyle{fancy}
+#+LATEX_HEADER: \lhead{COS 371, 372, 471, 472---Software Studio}
+#+LATEX_HEADER: \chead{}
+#+LATEX_HEADER: \rhead{Course Syllabus}
+#+LATEX_HEADER: \lfoot{Spring 2014}
+#+LATEX_HEADER: \cfoot{}
+#+LATEX_HEADER: \rfoot{Page \thepage\ of \pageref{LastPage}}
+#+LATEX_HEADER: \renewcommand{\headrulewidth}{0.4pt}
+#+LATEX_HEADER: \renewcommand{\footrulewidth}{0.4pt}
+#+LATEX_HEADER: \renewcommand\maketitle\relax
+
+* Instructor
+*Dr. Tom Nurkkala*\\
+Associate Professor, Computer Science and Engineering\\
+Director, Taylor Center for Missions Computing\\
+Office: Euler Science 211\\
+E-Mail: =tnurkkala@cse.taylor.edu=\\
+Phone: 8-5163\\
+Hours: MW 2:00-4:00 or by appointment\\
+
+* Objective
+*Software Studio trains you as a world-class software engineer*.
+
+We do this by engaging you in an agile, team-based software engineering organization,
+that develops and delivers non-trivial software for real, external partners.
+As a result, you will acquire:
++ Improved skills in all phases of the software development lifecycle
++ Direct experience developing non-trivial software that is of sufficient maturity and
+  quality to be deployed and used by our external partners
++ Concrete skills in project management, software configuration management, and project
+  feature and defect tracking
++ Personal time management and tracking skills
++ A deeper understanding of software engineering from current and historical literature on
+  software engineering, programming, process, management, and related areas.
++ Better written and spoken communication skills as you interact with your peers, our
+  partners, and your instructor
++ Specific skills in the languages, middleware, databases, and related technologies
+  associated with our project work
+In short, I want you to master all the practical and theoretical skills
+that will make you someone I would be delighted to hire
+for a challenging and responsible industry position.
+
+* Culture
+Studio inculcates a definite culture.
+Following are some of Studio's cultural characteristics.
+
+** Software Studio Delivers Working Products
+
+Many of your classes feature "projects" of different size and complexity.
+Software Studio is not one of them.
+Instead, our focus is on /products/.
+Whereas a /project/ implies a kind of nebulous open-endedness,
+a /product/ is
+/working software/
+that /satisfies its design requirements/
+and is /delivered/ to a /delighted/ customer.
+
+** Software Studio is Opinionated
+
+The goal of Software Studio is to train you to be world-class software engineer.
+To get there, you need to know and wield powerful, world-class software tools.
+
+Studio is a *Unix* shop.
+Dating to the early 1970's,
+Unix remains the most powerful operating system in common use.
+It's true that Windows dominates the world's desktops.
+But if Windows is the backyard pool behind suburban houses worldwide,
+Unix is the North Sea: wild and powerful and
+filled with cargo freighters and battleships.
+In Studio, "Unix" includes various flavors and derivatives of the original OS,
+particularly *Linux*, but also *Mac OS*, *Android*, and *iOS*.
+
+Studio is an *Emacs* shop.
+Far more than a mere editor,
+=emacs= has been called an /extensible computing environment/.
+Critically, it can be extended by its users to perform a myriad of amazing feats,
+just a fraction of which you will learn and leverage.
+Knowing other editors is helpful; I regularly use =vi= for small tasks.
+But if =vi= is a pontoon boat,
+=emacs= is a nuclear submarine. That flies. In space.
+
+Other best-of-breed technologies used in Software Studio include:
++ *Ubuntu* as our standard Linux distribution
++ *Git* for revision control
++ *Python*, *JavaScript*, *Objective-C* (iOS), *Java* (Android)
++ *Django* for database-backed web applications
++ *SQLite* (development) and *PostgreSQL* (production)
+
+** Software Studio is Agile
+
+Studio embraces an agile software development methodology
+based largely on *Scrum*.
+We are driven by customer requirements,
+create software that is adaptable to change,
+and interact with our customers early and often during development.
+We also incorporate selected ideas from *Extreme Programming*,
+*Kanban*, and *Pomodoro*.
+
+** Software Studio Emphasizes Service
+
+The products that we build serve a bigger purpose.
+We focus especially on software that meets the needs
+of the *global Christian missions community*
+or other non-profit and relief organizations.
+The *Taylor Center for Missions Computing*
+is a key partner in this regard.
+
+As a good citizen of the Taylor community,
+Studio also sometimes develops products for other parts of the university.
+
+** Software Studio is Intensely Practical
+
+Studio teaches you the skills necessary
+to deliver amazing products to our customers.
+We focus on two broad categories of skills:
+/software/ skills and /system/ skills.
+
+*Software skills* include requirements elicitation, coding, debugging, unit testing,
+revision control, continuous integration, continuous deployment,
+project management, code reviews, and defect tracking.
+
+*System skills* include, operating system virtualization; installation, configuration,
+maintenance, and administration of the operating system, network, database management
+system, and web server; software deployment; and disaster planning
+
+** Software Studio Fosters Teamwork
+
+To foster teamwork,
+we embrace the time-honored tradition of /apprenticeship/.
+The medieval guild system classified practitioners into three groups:
+/apprentice/, /journeyman/, and /master/.
+
+An /apprentice/ begun work as a young teen,
+contracted to a /master/ for five to nine years
+in order to learn the master's trade.
+The apprentice received no salary, but received room, board, and training
+in exchange for work done on the master's behalf.
+
+Upon learning the trade to the master's satisfaction,
+the apprentice was released from the contract to become a /journeyman/.
+The term, derived from the French word for /day/,
+indicated that the journeyman was typically paid as a day laborer.
+For the next few years,
+the journeyman worked to hone
+his[fn::Almost all participants in the medieval trades were men.]
+skills and establish his own business and clientele.
+
+After gaining sufficient experience,
+the journeyman created a /master piece/
+as demonstration of his mastery of the trade.
+Full members of the craft guild---its /masters/---evaluated the piece
+to determine whether it met the standards of the guild.
+If so, the journeyman was himself admitted into the guild as a /master/,
+which bestowed upon him both status and wealth.
+
+Students new to Software Studio are considered /apprentices/.
+As they gain experience, they advance to become /journeymen/ and, finally, /masters/.
+The following table connects these roles to time spent in Software Studio.
+
+#+ATTR_LATEX: :booktabs t
+| Semester | Course  | Level        |
+|----------+---------+--------------|
+|        1 | COS 371 | Apprentice 1 |
+|        2 | COS 372 | Apprentice 2 |
+|        3 | COS 471 | Journeyman   |
+|        4 | COS 472 | Master       |
+
+In Software Studio, our expectations for each group of practitioners
+include the following:
+1. /Apprentice/
+   + Focus on learning the tools and techniques we employ
+   + Contribute meaningfully to the product while learning
+   + Seek help from other team members when wedged
+   + Shoulder more responsibility throughout your first year
+2. /Journeyman/
+   + Focus on growing both the depth and the breadth of your understanding
+   + Share your knowledge with other team members---especially apprentices
+   + Learn how to learn on your own
+   + Know when to ask for help when you find yourself stuck on something new
+   + Engineer substantial portions of the product
+   + Prepare to shoulder the responsibilities of a master
+3. /Master/
+   + Focus on leading the team and delivering the product
+   + Actively seek to provide help to other team members when they're wedged
+   + Develop journeymen on the team to move them
+     toward mastery---they will be taking your place soon
+   + Take on the most challenging aspects of product development
+   + Continue to hone your understanding of new or advanced tools and techniques
+   + Interact with customer stakeholders to ensure a high quality product---one that
+     conforms fully to customer requirements
+
+* Content
+
+Software Studio is about /software/ and /scholarship/.
+
+** Software
+
+The majority of your time will be devoted to the design, development,
+testing, and deployment of production-quality software systems.
+
+We use an agile software process based on the industry standard /Scrum/ methodology.
+Projects are organized into three-week sprints,
+giving us five sprints over the course of each 15-week semester.
+Our class time during each sprint will be spent roughly as
+illustrated in this table.
+
+#+ATTR_LATEX: :booktabs t
+| Week | Day | First Hour             | Second Hour             |
+|------+-----+------------------------+-------------------------|
+|    1 | T   | Sprint Planning        | One-on-One              |
+|      | R   | Work                   | Work                    |
+|------+-----+------------------------+-------------------------|
+|    2 | T   | Reading Discussion     | Hot Topic/Guest Speaker |
+|      | R   | Work                   | Work                    |
+|------+-----+------------------------+-------------------------|
+|    3 | T   | Sys Admin              | Work                    |
+|      | R   | Critical Design Review | Sprint Retrospective    |
+
+Following is additional information about each of these activities.
++ /Sprint planning/ is the standard Scrum activity in which the team
+  plans the upcoming sprint.
++ I will chat individually with each of you in a /one-on-one/ meeting
+  at the beginning of each sprint.
+  Our goal is to make sure you understand your tasks for the sprint.
++ The single largest activity during class time
+  is doing actual /work/ on the project!
++ Each sprint will include a /reading discussion/ of a paper
+  or other reading that I will assign at the beginning of the sprint.
++ In each sprint, we'll hear about a /hot topic/ relevant to the class,
+  the project, or to software development in general.
+  Our speaker may be me, a member of the team, or a guest speaker.
++ Because you must know not only how to build a software system,
+  but also how to deploy and administer it, each sprint will include
+  a key topic related to /system administration/.
++ At the end of each sprint, we will conduct a /critical design review/,
+  which focuses on the work product produced during the sprint,
+  and a /sprint retrospective/, which focuses on
+  continuous software process improvement.
+
+** Scholarship
+
+The /reading discussion/ and /hot topic/ activities mentioned above
+add to your /scholarly understanding/ through
+reading, discussion, and special speakers.
+Readings for the course can be either classic or current papers, magazine articles,
+and book chapters that address critical issues in software engineering.  Reading topics
+include requirements, design, construction, testing, maintenance, configuration, quality
+management, process, methods, and ethics.
+
+* Mechanics
+** Attendance
+Physical attendance is required. I will be in class each day, and I expect you to be there
+also. In general, I am very understanding about students who must miss class due to a
+sanctioned Taylor activity, job interview, family emergency, and the like. If possible,
+let me know in advance if you will not be in class. I will work with you to arrange
+make-up instruction, homework, quizzes, etc.
+
+** Moodle
+The Computer Science and Engineering department uses Moodle as our Learning Management
+System. The URL for Moodle is https://moodle.cse.taylor.edu.
+To sign on to the course site for the first time, you will need an enrollment key.
+The key for this course is =nerds4christ=.
+
+You are responsible for checking Moodle regularly to keep up with assignment due dates and
+other announcements posted to the site. For due dates, the Moodle calendar is your friend.
+
+* Evaluation
+
+Grades are assigned as follows.
+Details for each grade item appears below.
+
+#+ATTR_LATEX: :booktabs t
+| Course Work          | Weight |
+|----------------------+--------|
+|                      | <r>    |
+| Time Log             |    25% |
+| Software Development |    25% |
+| Teamwork             |    10% |
+| Scholarship          |    15% |
+| Final Deliverables   |    25% |
+|----------------------+--------|
+| Total                |   100% |
+
+Refer to my /Periodic Table of the Grades/ (on Moodle) for my standard grading scheme.
+I reserve the right to award a higher grade than strictly earned;
+outstanding attendance and class participation figure prominently in such decisions.
+
+** Time Log
+
+Across campus, the expectation is that for each hour of course credit,
+you will spend one hour in class and two hours working outside of class.
+Because SWS is a four-credit class,
+the weekly expected workload is /twelve hours/ (including class time).
+
+You will be responsible for tracking your time spent in the in-class lab
+and working on your team project.
+Your weekly time log will include:
++ Date, start time, stop time
++ Duration
++ Task
+
+** Software Development
+
+I will evaluate your software development by:
++ Observation of your software development practices and process
+  during class.
++ Inspection of source code and documentation
+  submitted to the revision control system.
+  I will look for:
+  - Code organization, structure, and clarity
+  - Sound use of design patterns
+  - Good coding practices, adherence to common standards, naming, etc.
+  - Appropriate code reuse (no duplicate code, use of libraries, etc.)
+  - Separation of concerns (e.g., UI, logic, persistence)
+  - Complete test coverage, ease of test execution
+  - Clear, concise, and sufficient internal documentation (comments)
++ Installation and execution of those portions of the software
+  to which you contributed.
+
+** Teamwork
+
+I will evaluate you on your participation as a member of the project team.
+A good team member will exhibit the behaviors outlined above for
+his or her corresponding level in the class.
+
+** Scholarship
+
+You must demonstrate comprehension and application of the
+scholarly material we cover in class.
+Evidence I will look for includes:
++ Demonstrated understanding of reading assignments through
+  coherent comments and questions during discussion
++ Full participation in classroom discussions of papers and
+  special topics, and with guest speakers
++ Willingness to present on special topics or to share
+  your knowledge in classroom discussion
+
+** Final Deliverables (COS 371, 372, and 471)
+
+Write a paper about your personal experience in Software Studio this term. The goal of
+this paper is not to critique the class, your project, or your team, but to reflect on
+your own experience in the class and how you matured as a software engineer.
+
+Your paper should address at least the following questions. As appropriate, include ideas
+from the reading and in-class presentations, your individual experience, and your personal
+participation on your project.
++ What was the most important knowledge you acquired as it relates to your future as a
+  professional software engineer?
++ Similarly, what were the most important skills you acquired or honed?
++ What did you learn about yourself as it relates to being a member of a team?
++ How did your experience in the class speak to your vocational call as a Christ follower?
+
+These questions are not intended to be exhaustive. You are encouraged to reflect in your
+paper on any additional insights you gleaned from your experience in the class this term.
+
+Type (double space) your paper. Use good spelling, grammar, punctuation, and
+structure. Your paper should be between 1,000 and 1,250 words long.
+
+** Final Deliverables (COS 472)
+
+As partial demonstration of their mastery of the discipline,
+/all/ CS&E students complete and present a substantial project
+during their senior year. All students are required to:
+
+1. Write a formal paper
+2. Deliver a formal presentation
+3. Prepare and present a poster
+
+Most students satisfy this degree requirement
+through COS 492 (Senior Project).
+As a Software Studio student, you are not required to take COS 492;
+instead, you satisfy these requirements as part of Software Studio IV.
+
+An important decision that you should make early in your fourth semester of Software
+Studio (if not before) is the topic for your paper, presentation, and poster.
+You should meet with me no later than mid-term to discuss candidate topics.
+Here are some general guidelines:
+
++ In your first three semesters of Software Studio, you wrote a simple experience paper.
+  Your topic for Software Studio IV, however, must be much weightier.
++ You may focus on one or more non-trivial projects that you undertook
+  during your time in Software Studio.
++ You may choose as your topic some idea related to Software Studio that was not the
+  direct subject of one of your projects.
+
+Following is  detailed guidance on the three key deliverables for
+Software Studio IV.
+
+*** Paper
+
+Prepare a formal paper that would be suitable for publication in a professional journal or
+for presentation as a report on professional software development. Observe the following
+guidelines.
+
+1. You are responsible to determine the appropriate style and topic for your paper. I will
+   help.
+2. Your paper should be a minimum of eight to ten pages long
+   (between 2,000 and 2,500 words).
+3. You must submit a draft of your paper three weeks prior to the end of the semester so
+   that I have time to review it and you have time to revise it.
+4. The paper counts as 15% of your semester grade.
+5. The Computer Science and Engineering department will make your paper publically
+   available unless doing so would be restricted by the requirements of a journal or
+   conference for which your paper is accepted for publication.
+6. You are advised to seek writing assistance from the Writing Center, located in the
+   Academic Enrichment Center in the library.
+7. Your paper will be evaluated on the following criteria.
+   + Format and style appropriate to the topic
+   + Abstract gives a concise and complete overview of the paper
+   + Introduction justifies the utility of the paper and sets out a road map of the body
+     of the paper
+   + Overview of related work sets the contributions of the paper in context
+   + Body clearly communicates the essence of the work reported in the paper, including
+     research or engineering methodology, artifacts created, analysis and reporting
+     techniques employed, key procedures followed, etc.
+   + Concludes with a concise and accurate statement of the research performed,
+     development completed, and the specifics and significance of the results obtained
+   + Employs correct terminology and notation
+   + Uses correct spelling and grammar and reads clearly and cohesively; written in the
+     active voice
+
+*** Presentation
+
+Your ability to prepare and present an oral presentation in a professional setting is a
+key element of the course. In particular, it meets part of the Senior Comprehensive
+requirements and allows the course to be listed for SP credit. Observe these guidelines.
+
+1. You are responsible to determine the appropriate content, style, and format for your
+   presentation. I will help.
+2. Your presentation should include professional-grade supporting visual materials.
+3. You must submit a draft of your presentation outline and visual materials three weeks
+   prior to the end of the semester so that I have time to review them and you have time
+   to revise them.
+4. Faculty and students of the department will be invited and encouraged to attend your
+   presentation.
+5. The presentation counts as 15% of your semester grade.
+6. Your presentation will be evaluated on the following criteria.
+   + Duration not to exceed 30 minutes, including audience Q&A
+   + Quality of visual material
+   + Appropriate mannerisms, eye contact, etc.
+   + Spoken fluency, conciseness, and cohesiveness
+   + Minimal verbal noise ("um," "like," "you know," etc.)
+   + Appropriate attire
+   + Proper use of terminology and grammar
+   + Sufficient coverage of salient ideas relevant to your topic
+   + Understandability and appropriateness of material to the target audience
+
+*** Poster
+
+You will prepare a poster describing your work and present the poster to visitors who
+attend a poster session held by the department. Read, study, and evaluate past students'
+posters (displayed at various locations around the department) to get a better idea of
+what is expected of yours.
+
+Guidelines for the poster are as follows.
+
+1. Use a clean, clear layout that employs good layout and design, clear fonts, meaningful
+   colors, etc.
+2. Employ graphics (photos, illustrations, charts, graphs, figures, etc.) that enhance the
+   poster's message.
+3. Make evident the topic of your poster and the contributions that your work in the area
+   has made.
+4. Present your ideas logically and clearly so that your poster can be understood by a
+   reader whether you are there to explain it or not.
+
+Observe these guidelines from our system administrators on the preparation of your poster.
+
++ Most students use PowerPoint, although Adobe Illustrator is better designed to do
+  large-format printing. We can print from most apps that can print (Photoshop, Word,
+  Excel, Open Office, etc.), and can enlarge prints from page size to whatever poster size
+  you need.
++ We can print from PDFs, although we suggest that you provide the original file format if
+  you are using an app that we support. We can also print from JPEGs if you simply wish to
+  print photos.
++ Our paper widths are 24, 36, and 42 inches. The printer is not capable of printing
+  larger than 42 inches. Paper length is variable.
++ Avoid using a dark background unless the dark background is important in conveying your
+  message. Dark backgrounds require /large/ amounts of ink, can gunk up the print heads,
+  and cost more to print.
++ Visit http://www.swarthmore.edu/NatSci/cpurrin1/posteradvice.htm for sample templates
+  that you may wish to use.
+
+
+* Academic Integrity
+
+As a student at an institution whose goal is to honor Christ in all that it does, I expect
+you to uphold the strictest standards of academic integrity. You must do your own work,
+cite others when you present their work, and never misrepresent your academic performance
+in any way. Violation of these standards stains the reputations of you as a student,
+Taylor as an institution, and Jesus as our Lord. Such a violation will result in your
+failing the course and other disciplinary action by the University. Refer to the Taylor
+catalog for the official statement of these ideas.

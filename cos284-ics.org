@@ -1,0 +1,429 @@
+#+TITLE: COS 284---Introduction to Computer Systems
+#+DATE: Spring, 2014
+
+#+STARTUP: indent
+#+OPTIONS: toc:nil author:nil ':t
+
+#+LATEX_CLASS: syllabus
+#+LATEX_HEADER: \usepackage{booktabs}
+#+LATEX_HEADER: \usepackage[margin=1.5in]{geometry}
+#+LATEX_HEADER: \usepackage{lastpage}
+#+LATEX_HEADER: \usepackage{fancyhdr}
+#+LATEX_HEADER: \pagestyle{fancy}
+#+LATEX_HEADER: \lhead{COS 284---Introduction to Computer Systems}
+#+LATEX_HEADER: \chead{}
+#+LATEX_HEADER: \rhead{Course Syllabus}
+#+LATEX_HEADER: \lfoot{Spring 2014}
+#+LATEX_HEADER: \cfoot{}
+#+LATEX_HEADER: \rfoot{Page \thepage\ of \pageref{LastPage}}
+#+LATEX_HEADER: \renewcommand{\headrulewidth}{0.4pt}
+#+LATEX_HEADER: \renewcommand{\footrulewidth}{0.4pt}
+#+LATEX_HEADER: \renewcommand\maketitle\relax
+
+#+COLUMNS: %25ITEM %9TODO %10PRIORITY %5TAGS
+* Instructor
+*Dr. Tom Nurkkala*\\
+Associate Professor, Computer Science and Engineering\\
+Director, Taylor Center for Missions Computing\\
+Office: Euler Science Complex 211\\
+E-Mail: =tnurkkala@cse.taylor.edu=\\
+Phone: 8-5163\\
+Hours: MW 2:00-4:00 or by appointment\\
+
+* Credit
+This course is based on the Introduction to Computer Systems course at Carnegie Mellon
+University (CMU). Professors Randal Bryant and David O’Hallaron, who developed the course
+and wrote the textbook (Section 5), have generously made available course material
+(including notes, syllabi, laboratory exercises, and lecture slides) for use at other
+institutions. I make considerable use of their excellent materials throughout the course
+(including in this document!) and wish to credit and thank them.
+
+I have also drawn liberally from previous offerings of this course at Taylor University,
+and wish to thank Professor Jonathan Geisler for his kind assistance.
+
+* Course Overview
+The aim of the course is to help you become a better programmer by teaching you the basic
+concepts underlying all computer systems. I want you to learn what really happens when
+your programs run, so that when things go wrong (as they always do) you will have the
+intellectual tools to solve the problem.
+
+Why do you need to understand computer systems if you do all of your programming in
+high-level languages? In most of computer science, we're pushed to make abstractions and
+stay within their frameworks. But, any abstraction ignores effects that can become
+critical. As an analogy, Newtonian mechanics ignores relativistic effects. The Newtonian
+abstraction is completely appropriate for bodies moving at less than $0.1c$, but higher
+speeds require working at a greater level of detail.
+
+The following "realities" are some of the major areas where the abstractions you've
+learned in previous classes break down:
+1. /An =int= isn't an integer; a =float= isn't a real/.
+   Our finite representations of numbers have significant limitations,
+   and because of these limitations
+   we sometimes have to think in terms of bit-level representations.
+2. /You've got to know assembly language/.
+   Even if you never write programs in assembly,
+   the behavior of a program sometimes cannot be understood
+   based purely on the abstraction of a high-level language.
+   Furthermore, understanding the effects of bugs
+   requires familiarity with the machine-level model.
+3. /Memory matters/.
+   Computer memory is not unbounded.
+   It must be allocated and managed.
+   Memory referencing errors are especially pernicious.
+   An erroneous updating of one object can cause a change
+   in some logically unrelated object.
+   Also, the combination of caching and virtual memory
+   provides the functionality of a uniform unbounded address space,
+   but not the performance.
+4. /There is more to performance than asymptotic complexity/.
+   Constant factors also matter.
+   There are systematic ways to evaluate and improve program performance.
+5. /Computers do more than execute instructions/.
+   They also need to get data in and out
+   and they interact with other systems over networks.
+
+By the end of the course, you will understand these realities in some detail.
+As a result, you will have learned skills and knowledge
+that will help you throughout your education and career as a computer scientist.
+
+* Learning Objectives
+
+By the end of the semester, you should be able to:
+
+1. Describe how a computer represents integers internally.
+2. Convert twos complement binary values to decimal.
+3. Convert binary to decimal and hexadecimal.
+4. Understand how a computer represents fractional values.
+5. Convert a fractional decimal value to its IEEE single- or double-precision representation.
+6. Read x86 assembly code.
+7. Write simple x86 assembly functions.
+8. Describe how a computer executes a function call
+   including parameters, return values, and the stack.
+9. Describe how compilers convert C code to x86 assembly.
+10. Explain how various C data structures are accessed in x86 assembly.
+11. Describe the motivation for a memory hierarchy.
+12. Explain how a memory hierarchy works.
+13. Understand how a cache is organized internally.
+14. Create programs that take advantage of the memory hierarchy.
+15. Explain how a linker works.
+16. Contrast static and dynamic linking.
+17. Explain what a system call is and how system calls work.
+18. Explain the fork system call.
+19. Explain the exec family of system calls.
+20. Describe how hardware and the operating system cooperate to deal with exceptional
+    situations.
+21. Measure the performance of an application accurately.
+22. Improve the performance of an application based on good measurement techniques.
+23. Understand virtual memory and how it works.
+24. Explain the benefits of virtual memory.
+25. Explain the role of the translation look-aside buffer.
+26. Describe the virtual memory organization
+    of a process running with Linux on an x86 processor.
+27. Explain how a dynamic memory allocator works.
+28. Be familiar with garbage collection.
+29. Be familiar with common memory bugs and how to avoid them.
+30. Explain what concurrent computation is and how to achieve it.
+31. Contrast process-based concurrency with I/O multiplexing-based concurrency.
+32. Describe why synchronization is necessary.
+33. Be familiar with how to achieve synchronization.
+
+* Texts
+The text by Bryant and O'Halaron\cite{cs:app} is required.
+We will refer to it as =CS:APP=.
+You are /encouraged/ to purchase---or have readily available---the
+updated edition of "K&R," the classic reference on C.\cite{k&r}
+
+It is /very important/ that you read carefully
+the assigned readings in the =CS:APP= book.
+You will get the most benefit if you read assigned passages
+/before/ they are covered in class.
+A detailed guide to reading assignments can be found in the course schedule.
+
+The textbook includes many practice problems throughout the body of each chapter. These
+are straightforward exercises that help you understand the material you have just read by
+using it /immediately/. For self-study, solutions for all practice problems appear at the
+end of each chapter.
+
+In short, the best way to use the textbook to enhance your learning is as follows:
+1. Read the assigned readings /before/ the corresponding class.
+2. Work the practice problems /immediately/ as you encounter them in the text.
+3. Check your work—and your understanding—with the answer key.
+
+* Schedule
+** Topics
+:PROPERTIES:
+:COLUMNS:  %30ITEM %3Classes %19Reading %4HW %10Lab
+:END:
+*** Course Overview
+:PROPERTIES:
+:Reading:  1
+:Classes:  1
+:END:
+*** Bits and Bytes
+**** Basics
+:PROPERTIES:
+:Reading:  2.1
+:Classes:  1
+:END:
+**** Integers
+:PROPERTIES:
+:Reading:  2.2--2.3
+:HW: 2a
+:Classes:  2
+:END:
+**** Floating Point
+:PROPERTIES:
+:Reading:  2.4
+:HW: 2b
+:Classes:  1
+:END:
+*** Machine Programming
+**** Basics 1
+:PROPERTIES:
+:Reading:  3.1--3.3
+:HW: 2c
+:Classes:  1
+:Lab: 
+:END:
+**** Basics 2
+:PROPERTIES:
+:Reading:  3.4--3.5, 3.13.1--3
+:Classes:  1
+:Lab:      Data Lab
+:END:
+**** Control
+:PROPERTIES:
+:Reading:  3.6, 3.13.4
+:Classes:  1
+:END:
+**** Procedures
+:PROPERTIES:
+:Reading:  3.7
+:HW: 3a
+:Classes:  1
+:END:
+**** Data 1
+:PROPERTIES:
+:Reading:  3.8
+:Classes:  1
+:END:
+**** Data 2
+:PROPERTIES:
+:Classes:  1
+:Reading:  3.9, 3.13.5
+:Lab:      Bomb Lab
+:END:
+**** Advanced 1
+**** Advanced 2
+*** Program Optimization
+*** Memory Hierarchy
+*** Cache Memory
+*** Linking
+*** Exceptional Control Flow
+**** Exceptions and Processes
+**** Signals and Non-Local Jumps
+*** Virtual Memory
+**** Concepts
+**** Systems
+*** Dynamic Memory
+**** Basic
+**** Advanced
+*** Internetworking
+**** Network Programming
+**** Web Servers
+*** Concurrent Programming
+**** Sychronization
+
+* Labs
+
+The labs come directly from the textbook authors. They have a very nice system set up so
+that you can test and submit all your programs online and will already know how you are
+doing on the assignment prior to submission. This should make it very easy to know when
+you have a correct solution and when you need to keep working.
+
+Please do not look for solutions online. Doing so constitutes cheating.  The authors have
+introduced randomness into the assignments so solutions posted by others may be wrong
+anyway.
+
+You will use Linux for all lab work. For some labs, you will be given a binary that works
+on the CSE machines, but should probably work on any recent vintage of Linux. For others,
+you are required to develop code for a Linux box. You may use any machine to develop, but
+/it must run correctly on the CSE machines/. You must check your work on the machines in the
+laboratories before submitting it.
+
+Most low-level systems code is written in~C, and you will be required to do the same. You
+will also be required to read, understand, generate, or otherwise fiddle with x86 assembly
+on a Linux box.
+
+* Evaluation
+
+The grading breakdown for the course is as follows:
+
+#+ATTR_LATEX: :booktabs t
+| Deliverable          | Weight |
+|----------------------+--------|
+|                      |    <r> |
+| Assignments (weekly) |    20% |
+| Labs (x6)            |    40% |
+| Exams (x3)           |    25% |
+| Final                |    15% |
+|----------------------+--------|
+| Total                |   100% |
+
+Refer to the Periodic Table of the Grades (on Moodle) for the grading scheme. I reserve
+the right to award a higher grade than strictly earned; outstanding attendance and class
+participation figure prominently in such decisions.
+
+* Moodle
+
+The Computer Science and Engineering department uses Moodle as our Learning Management
+System. The URL for Moodle is https://cms.cse.taylor.edu. To sign on to the course site
+for the first time, you will need an enrollment key. The key for this course is
+=nerds4christ=.
+
+You are responsible for checking Moodle regularly to keep up with assignment due dates and
+other announcements posted to the site. For due dates, the Moodle calendar is your friend.
+
+* Classroom Expectations
+
+Following are my expectations about classroom conduct.
+
+** Attendance
+
+Attendance is required. I will be in class each day, and I expect you to be there also. I
+will log who attends class.
+
+In general, I am very understanding about students who must miss class due to a sanctioned
+Taylor activity, medical appointment, job interview, family emergency, and the like. If
+possible, let me know in advance that you will not be in class; I will work with you to
+arrange make-up instruction, homework, exams, etc.
+
+** Conduct
+
+I expect you to be prepared, awake, aware, and participatory during class. I will not
+hesitate to ask you to stand or move if you are distracted or sleepy.
+
+I expect you to join in discussions, respond to questions from me and from your
+colleagues, and ask questions of me. I expect you to hold my feet to the fire if I am
+being unclear, unkind, or contradictory.
+
+** Gizmos
+
+You may not use a laptop, tablet, or similar device to check e-mail, engage in social
+networking, surf the web, or any other activity not directly relevant to current classroom
+activity.
+
+If you use an electronic gizmo during class for legitimate academic purposes (e.g., note
+taking), be prepared to demonstrate relevant use on demand at any time.
+
+* Academic Integrity
+
+As a student at an institution whose goal is to honor Christ in all that it does, i expect
+you to uphold the strictest standards of academic integrity. You must do your own work,
+cite others when you present their work, and never misrepresent your academic performance
+in any way. Violation of these standards stains the reputations of you as a student,
+Taylor as an institution, and Jesus as our Lord. Such a violation may result in your
+failing the course and other disciplinary action by the University. Refer to the Taylor
+catalog for the official statement of these ideas.
+
+** What Constitutes Cheating?
+
+For purposes of this course, the following are /non-exhaustive/ examples of violations of
+academic integrity.
+
+1. Sharing code or other electronic files by copying, retyping, looking at, or supplying a
+   copy of a file from this or a previous semester. Be sure to store your work in
+   protected directories, and screen lock or log off a lab machine to prevent others from
+   copying your work without your explicit assistance.
+2. Sharing written assignments or exams by looking at, copying, or supplying an assignment
+   or exam.
+3. Using other's code. Using code from this or previous offerings of the class, from
+   courses at other institutions, or from any other source (e.g., software found on the
+   Internet).
+4. Looking at other's code. Although mentioned above, it bears repeating. Looking at other
+   students' code or allowing others to look at yours is cheating. There is no notion of
+   looking “too much,” since no looking is allowed at all.
+
+** What Does Not Constitute Cheating?
+
+In contrast, the following are non-exhaustive examples of activities that do not violate
+academic integrity.
+
+1. Clarifying ambiguities or vague points in class handouts or textbooks.
+2. Helping others use the computer systems, networks, compilers, debuggers, profilers, or
+   other system facilities.
+3. Helping others with high-level design issues.
+4. Helping others with high-level (not code-based) debugging.
+5. Using code from the =CS:APP= website or from the class web pages.
+
+Be sure to store your work in protected directories, and log off when you leave an open
+cluster, to prevent others from copying your work without your explicit assistance.
+
+#+LATEX: \bibliographystyle{plain}
+#+LATEX: \bibliography{courses}
+
+| Wk | Day | Ln | Topic                            | Reading           | HW Due | Lab Due    | Exam            |
+|----+-----+----+----------------------------------+-------------------+--------+------------+-----------------|
+|    | <c> |    |                                  | <l>               | <l>    |            |                 |
+| 1  | W   |  1 | Overview                         | 1                 |        |            |                 |
+|    | F   |  2 | Bits and Bytes                   | 2.1               |        |            |                 |
+|----+-----+----+----------------------------------+-------------------+--------+------------+-----------------|
+|  2 | M   |  3 | Integers                         | 2.2-2.3           | Ch 2a  |            |                 |
+|    | W   |  4 |                                  |                   |        |            |                 |
+|    | F   |  5 | Floating Point                   | 2.4               | Ch 2b  |            |                 |
+|----+-----+----+----------------------------------+-------------------+--------+------------+-----------------|
+|  3 | M   |  6 | Machine Programming: Basics      | 3.1-3.3           | Ch 2c  |            |                 |
+|    | W   |  7 |                                  | 3.4-3.5, 3.13.1-3 |        | Data Lab   |                 |
+|    | F   |  8 | Machine Programming: Control     | 3.6, 3.13.4       |        |            |                 |
+|----+-----+----+----------------------------------+-------------------+--------+------------+-----------------|
+|  4 | M   |  9 | Machine Programming: Procedures  | 3.7               | Ch 3a  |            |                 |
+|    | W   | 10 | Machine Programming: Data        | 3.8               |        |            |                 |
+|    | F   | 11 |                                  | 3.9, 3.13.5       |        | Bomb Lab   |                 |
+|----+-----+----+----------------------------------+-------------------+--------+------------+-----------------|
+|  5 | M   | 12 | Machine Programming: Advanced    | 3.10-3.12         | Ch 3b  |            |                 |
+|    | W   | 13 |                                  | 3.14-3.15         |        |            |                 |
+|    | F   | 14 | Review for Exam 1                |                   | Ch 3c  |            |                 |
+|----+-----+----+----------------------------------+-------------------+--------+------------+-----------------|
+|  6 | M   | 15 | Program Optimization             | 5.1-5.5           |        |            | Exam 1 (Ch 1-3) |
+|    | W   | 16 |                                  | 5.6-5.10          |        | Buf Lab    |                 |
+|    | F   | 16 |                                  |                   |        |            |                 |
+|----+-----+----+----------------------------------+-------------------+--------+------------+-----------------|
+|  7 | M   | 17 |                                  | 5.11-5.15         |        |            |                 |
+|    | W   | 18 | Memory Hierarchy                 | 6.1-6.3           | Ch 5   |            |                 |
+|    | F   | 19 | Cache Memories                   | 6.4               |        |            |                 |
+|----+-----+----+----------------------------------+-------------------+--------+------------+-----------------|
+|  8 | M   | 20 |                                  | 6.5-6.7           |        |            |                 |
+|    | W   | 21 | Linking                          | 7.1-7.7           | Ch 6   |            |                 |
+|    | F   | 22 |                                  | 7.8-7.14          |        | Cache Lab  |                 |
+|----+-----+----+----------------------------------+-------------------+--------+------------+-----------------|
+|  9 | M   | 22 |                                  |                   |        |            |                 |
+|    | W   | 22 |                                  |                   |        |            |                 |
+|    | F   | 22 |                                  |                   |        |            |                 |
+|----+-----+----+----------------------------------+-------------------+--------+------------+-----------------|
+| 10 | M   | 22 |                                  |                   |        |            |                 |
+|    | W   | 23 | Review for Exam 2                |                   | Ch 7   |            |                 |
+|    | F   | 24 | ECF: Exceptions and Processes    | 8.1-8.3           |        |            | Exam 2 (Ch 5-7) |
+|----+-----+----+----------------------------------+-------------------+--------+------------+-----------------|
+| 11 | M   | 25 |                                  | 8.4               |        |            |                 |
+|    | W   | 26 | ECF: Signals and Non-Local Jumps | 8.5-8.8           |        |            |                 |
+|    | F   | 27 | Virtual Memory: Concepts         | 9.1-9.5           | Ch 8   |            |                 |
+|----+-----+----+----------------------------------+-------------------+--------+------------+-----------------|
+| 12 | M   | 28 |                                  | 9.6               |        | Shell Lab  |                 |
+|    | W   | 29 | Virtual Memory: Systems          | 9.7-9.8           |        |            |                 |
+|    | F   | 30 | Dynamic Memory: Basic            | 9.9               |        |            |                 |
+|----+-----+----+----------------------------------+-------------------+--------+------------+-----------------|
+| 13 | M   | 31 | Dynamic Memory: Advanced         | 9.10-9.11         |        |            |                 |
+|    | W   | 32 | Review for Exam 3                |                   | Ch 9   |            |                 |
+|    | F   | 33 | Inter-networking                 | 11.1-11.3         |        |            | Exam 3 (Ch 8-9) |
+|----+-----+----+----------------------------------+-------------------+--------+------------+-----------------|
+| 14 | M   | 34 |                                  |                   |        | Malloc Lab |                 |
+|    | W   | 35 | Network Programming              | 11.4              |        |            |                 |
+|    | F   | 36 | Web Servers                      | 11.5-11.6         |        |            |                 |
+|----+-----+----+----------------------------------+-------------------+--------+------------+-----------------|
+| 15 | M   | 37 | Concurrent Programming           | 12.1-12.3         | Ch 11  |            |                 |
+|    | W   | 38 |                                  |                   |        |            |                 |
+|    | F   | 39 | Synchronization: Basic           | 12.4-12.5.3       |        |            |                 |
+|----+-----+----+----------------------------------+-------------------+--------+------------+-----------------|
+| 16 | M   |    |                                  |                   | Ch 12  |            |                 |
+|    | W   |    |                                  |                   |        |            |                 |
+|    | F   |    |                                  |                   |        |            |                 |
