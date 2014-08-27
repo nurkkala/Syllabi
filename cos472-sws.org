@@ -13,7 +13,7 @@
 #+LATEX_HEADER: \lhead{COS 371, 372, 471, 472---Software Studio}
 #+LATEX_HEADER: \chead{}
 #+LATEX_HEADER: \rhead{Course Syllabus}
-#+LATEX_HEADER: \lfoot{Spring 2014}
+#+LATEX_HEADER: \lfoot{Fall 2014}
 #+LATEX_HEADER: \cfoot{}
 #+LATEX_HEADER: \rfoot{Page \thepage\ of \pageref{LastPage}}
 #+LATEX_HEADER: \renewcommand{\headrulewidth}{0.4pt}
