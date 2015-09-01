@@ -1,5 +1,5 @@
 #+TITLE: COS 371, 372, 471, 472---Software Studio
-#+DATE: Fall, 2014
+#+DATE: Spring 2015
 
 #+STARTUP: indent
 #+OPTIONS: toc:nil author:nil ':t
@@ -13,7 +13,7 @@
 #+LATEX_HEADER: \lhead{COS 371, 372, 471, 472---Software Studio}
 #+LATEX_HEADER: \chead{}
 #+LATEX_HEADER: \rhead{Course Syllabus}
-#+LATEX_HEADER: \lfoot{Fall 2014}
+#+LATEX_HEADER: \lfoot{Spring 2015}
 #+LATEX_HEADER: \cfoot{}
 #+LATEX_HEADER: \rfoot{Page \thepage\ of \pageref{LastPage}}
 #+LATEX_HEADER: \renewcommand{\headrulewidth}{0.4pt}
@@ -31,8 +31,7 @@ Hours: MW 2:00-4:00 or by appointment\\
 
 * Objective
 *Software Studio trains you as a world-class software engineer*.
-
-We do this by engaging you in an agile, team-based software engineering organization,
+We do this by engaging you in an agile, team-based software engineering organization
 that develops and delivers non-trivial software for real, external partners.
 As a result, you will acquire:
 + Improved skills in all phases of the software development lifecycle
@@ -67,7 +66,6 @@ that /satisfies its design requirements/
 and is /delivered/ to a /delighted/ customer.
 
 ** Software Studio is Opinionated
-
 The goal of Software Studio is to train you to be world-class software engineer.
 To get there, you need to know and wield powerful, world-class software tools.
 
@@ -81,7 +79,8 @@ filled with cargo freighters and battleships.
 In Studio, "Unix" includes various flavors and derivatives of the original OS,
 particularly *Linux*, but also *Mac OS*, *Android*, and *iOS*.
 
-Studio is an *Emacs* shop.
+Studio uses best-of-breed tools.
+I particularly recommend *Emacs*.
 Far more than a mere editor,
 =emacs= has been called an /extensible computing environment/.
 Critically, it can be extended by its users to perform a myriad of amazing feats,
@@ -92,13 +91,11 @@ But if =vi= is a pontoon boat,
 
 Other best-of-breed technologies used in Software Studio include:
 + *Ubuntu* as our standard Linux distribution
-+ *Git* for revision control
++ *Git* and *Github* for revision control
 + *Python*, *JavaScript*, *Objective-C* (iOS), *Java* (Android)
-+ *Django* for database-backed web applications
-+ *SQLite* (development) and *PostgreSQL* (production)
-
++ *Django* backed by *SQLite* (development) and *PostgreSQL* (production)
++ *AngularJS* backed by *NodeJS*, *Express*, and *MongoDB*
 ** Software Studio is Agile
-
 Studio embraces an agile software development methodology
 based largely on *Scrum*.
 We are driven by customer requirements,
@@ -106,21 +103,16 @@ create software that is adaptable to change,
 and interact with our customers early and often during development.
 We also incorporate selected ideas from *Extreme Programming*,
 *Kanban*, and *Pomodoro*.
-
 ** Software Studio Emphasizes Service
-
 The products that we build serve a bigger purpose.
 We focus especially on software that meets the needs
 of the *global Christian missions community*
 or other non-profit and relief organizations.
 The *Taylor Center for Missions Computing*
 is a key partner in this regard.
-
 As a good citizen of the Taylor community,
 Studio also sometimes develops products for other parts of the university.
-
 ** Software Studio is Intensely Practical
-
 Studio teaches you the skills necessary
 to deliver amazing products to our customers.
 We focus on two broad categories of skills:
@@ -133,9 +125,7 @@ project management, code reviews, and defect tracking.
 *System skills* include, operating system virtualization; installation, configuration,
 maintenance, and administration of the operating system, network, database management
 system, and web server; software deployment; and disaster planning
-
 ** Software Studio Fosters Teamwork
-
 To foster teamwork,
 we embrace the time-honored tradition of /apprenticeship/.
 The medieval guild system classified practitioners into three groups:
@@ -199,57 +189,85 @@ include the following:
    + Continue to hone your understanding of new or advanced tools and techniques
    + Interact with customer stakeholders to ensure a high quality product---one that
      conforms fully to customer requirements
-
 * Content
-
 Software Studio is about /software/ and /scholarship/.
-
 ** Software
-
 The majority of your time will be devoted to the design, development,
 testing, and deployment of production-quality software systems.
 
-We use an agile software process based on the industry standard /Scrum/ methodology.
-Projects are organized into three-week sprints,
+We use an agile software process based on the industry standard *Scrum* methodology.
+The semester is organized into three-week sprints,
 giving us five sprints over the course of each 15-week semester.
-Our class time during each sprint will be spent roughly as
+Except for the first sprint, our class time during each sprint will be spent roughly as
 illustrated in this table.
 
 #+ATTR_LATEX: :booktabs t
-| Week | Day | First Hour             | Second Hour             |
-|------+-----+------------------------+-------------------------|
-|    1 | T   | Sprint Planning        | One-on-One              |
-|      | R   | Work                   | Work                    |
-|------+-----+------------------------+-------------------------|
-|    2 | T   | Reading Discussion     | Hot Topic/Guest Speaker |
-|      | R   | Work                   | Work                    |
-|------+-----+------------------------+-------------------------|
-|    3 | T   | Sys Admin              | Work                    |
-|      | R   | Critical Design Review | Sprint Retrospective    |
+| Week | Day | First Hour           | Second Hour             |
+|------+-----+----------------------+-------------------------|
+|    1 | T   | Sprint Retrospective | Sprint Planning         |
+|      | R   | Work                 | Work                    |
+|------+-----+----------------------+-------------------------|
+|    2 | T   | Reading Discussion   | Hot Topic/Guest Speaker |
+|      | R   | Work                 | Work                    |
+|------+-----+----------------------+-------------------------|
+|    3 | T   | Sys Admin            | Work                    |
+|      | R   | One-on-One           | Work                    |
 
-Following is additional information about each of these activities.
-+ /Sprint planning/ is the standard Scrum activity in which the team
-  plans the upcoming sprint.
-+ I will chat individually with each of you in a /one-on-one/ meeting
-  at the beginning of each sprint.
-  Our goal is to make sure you understand your tasks for the sprint.
-+ The single largest activity during class time
-  is doing actual /work/ on the project!
-+ Each sprint will include a /reading discussion/ of a paper
-  or other reading that I will assign at the beginning of the sprint.
-+ In each sprint, we'll hear about a /hot topic/ relevant to the class,
-  the project, or to software development in general.
+The first day of a sprint comprises
+a /sprint retrospective/ on the previous sprint
+and /sprint planning/ for the upcoming sprint.
+Combining these activities on the same class day
+simplifies meeting with our customer.
+Sprint planning meetings will proceed as follows:
+1. Customer confirms that the top stories on the backlog
+   are indeed the top priority for implementation in the sprint.
+2. Senior members of the team (journeymen, masters) are assigned as owners for each story
+   in the sprint.
+3. For each story, the story owner will:
+   1. Estimate the story duration and enter the duration into the task tracker.
+   2. Break the story into tasks.
+   3. Assign owners to tasks.
+4. For each task, the task owner will estimate task duration and enter it into the task tracker.
+No work should begin on a story until all these steps are completed.
+Our goal is to complete all the steps in class on the day of sprint planning.
+
+The single largest activity during class time is doing actual /work/ on the project.
+Other activities during the sprint are as follows.
++ A /reading discussion/ of a paper or other reading that I will assign at the beginning
+  of the sprint.
++ A /hot topic/ relevant to the class, the project, or to software development in general.
   Our speaker may be me, a member of the team, or a guest speaker.
 + Because you must know not only how to build a software system,
   but also how to deploy and administer it, each sprint will include
   a key topic related to /system administration/.
-+ At the end of each sprint, we will conduct a /critical design review/,
-  which focuses on the work product produced during the sprint,
-  and a /sprint retrospective/, which focuses on
-  continuous software process improvement.
++ On the last class day of a sprint,
+  I will chat individually with each of you in a /one-on-one/ meeting
+  that will last 5--10 minutes.
 
+At the beginning of the semester,
+we will spend one week on introduction and on-boarding activities,
+followed by a two-week "mini-sprint" as shown in this table.
+
+#+ATTR_LATEX: :booktabs t
+| Week | Day | First Hour          | Second Hour             |
+|------+-----+---------------------+-------------------------|
+|    1 | T   | Course Introduction | On-boarding             |
+|      | R   | On-boarding         |                         |
+|------+-----+---------------------+-------------------------|
+|    2 | T   | Sprint Planning     |                         |
+|      | R   | Work                | Work                    |
+|------+-----+---------------------+-------------------------|
+|    3 | T   | Reading Discussion  | Hot Topic/Guest Speaker |
+|      | R   | One-on-One          | Work                    |
+
+During /on-boarding/, the entire team focuses on getting up to speed with the development
+environment, tools, and processes to be employed during the semester. New students
+(Apprentice 1) will each be assigned a senior member of the team (Master or Journeyman) as
+a mentor. The mentor is responsible to ensure that the apprentice has the proper
+environment and tools available, and that he or she understands all aspects of the
+development process sufficiently in order to begin contributing meaningfully to the
+product at the beginning of the mini-sprint.
 ** Scholarship
-
 The /reading discussion/ and /hot topic/ activities mentioned above
 add to your /scholarly understanding/ through
 reading, discussion, and special speakers.
@@ -257,7 +275,6 @@ Readings for the course can be either classic or current papers, magazine articl
 and book chapters that address critical issues in software engineering.  Reading topics
 include requirements, design, construction, testing, maintenance, configuration, quality
 management, process, methods, and ethics.
-
 * Mechanics
 ** Attendance
 Physical attendance is required. I will be in class each day, and I expect you to be there
@@ -347,7 +364,6 @@ Evidence I will look for includes:
   your knowledge in classroom discussion
 
 ** Final Deliverables (COS 371, 372, and 471)
-
 Write a paper about your personal experience in Software Studio this term. The goal of
 this paper is not to critique the class, your project, or your team, but to reflect on
 your own experience in the class and how you matured as a software engineer.
@@ -366,7 +382,6 @@ paper on any additional insights you gleaned from your experience in the class t
 
 Type (double space) your paper. Use good spelling, grammar, punctuation, and
 structure. Your paper should be between 1,000 and 1,250 words long.
-
 ** Final Deliverables (COS 472)
 
 As partial demonstration of their mastery of the discipline,
