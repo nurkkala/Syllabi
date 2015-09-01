@@ -13,7 +13,7 @@
 #+LATEX_HEADER: \lhead{COS 371, 372, 471, 472---Software Studio}
 #+LATEX_HEADER: \chead{}
 #+LATEX_HEADER: \rhead{Course Syllabus}
-#+LATEX_HEADER: \lfoot{Spring 2015}
+#+LATEX_HEADER: \lfoot{Fall 2015}
 #+LATEX_HEADER: \cfoot{}
 #+LATEX_HEADER: \rfoot{Page \thepage\ of \pageref{LastPage}}
 #+LATEX_HEADER: \renewcommand{\headrulewidth}{0.4pt}
@@ -27,7 +27,7 @@ Director, Taylor Center for Missions Computing\\
 Office: Euler Science 211\\
 E-Mail: =tnurkkala@cse.taylor.edu=\\
 Phone: 8-5163\\
-Hours: MW 2:00-4:00 or by appointment\\
+Hours: MW 2:00-4:00, TR 1:00-2:00
 
 * Objective
 *Software Studio trains you as a world-class software engineer*.
@@ -48,14 +48,13 @@ As a result, you will acquire:
   associated with our project work
 In short, I want you to master all the practical and theoretical skills
 that will make you someone I would be delighted to hire
-for a challenging and responsible industry position.
+for a challenging and responsible position as a professional software engineer.
 
 * Culture
 Studio inculcates a definite culture.
 Following are some of Studio's cultural characteristics.
 
 ** Software Studio Delivers Working Products
-
 Many of your classes feature "projects" of different size and complexity.
 Software Studio is not one of them.
 Instead, our focus is on /products/.
@@ -95,6 +94,9 @@ Other best-of-breed technologies used in Software Studio include:
 + *Python*, *JavaScript*, *Objective-C* (iOS), *Java* (Android)
 + *Django* backed by *SQLite* (development) and *PostgreSQL* (production)
 + *AngularJS* backed by *NodeJS*, *Express*, and *MongoDB*
++ *Trello* for project and sprint backlogs,
+  together with *Plus for Trello* (Chrome extension) for time tracking and management.
++ *Meteor* for real-time web applications
 ** Software Studio is Agile
 Studio embraces an agile software development methodology
 based largely on *Scrum*.
@@ -185,6 +187,7 @@ include the following:
    + Actively seek to provide help to other team members when they're wedged
    + Develop journeymen on the team to move them
      toward mastery---they will be taking your place soon
+   + Evaluate the performance of team members
    + Take on the most challenging aspects of product development
    + Continue to hone your understanding of new or advanced tools and techniques
    + Interact with customer stakeholders to ensure a high quality product---one that
@@ -196,7 +199,7 @@ The majority of your time will be devoted to the design, development,
 testing, and deployment of production-quality software systems.
 
 We use an agile software process based on the industry standard *Scrum* methodology.
-The semester is organized into three-week sprints,
+The semester is organized into (mostly) three-week sprints,
 giving us five sprints over the course of each 15-week semester.
 Except for the first sprint, our class time during each sprint will be spent roughly as
 illustrated in this table.
@@ -211,7 +214,7 @@ illustrated in this table.
 |      | R   | Work                 | Work                    |
 |------+-----+----------------------+-------------------------|
 |    3 | T   | Sys Admin            | Work                    |
-|      | R   | One-on-One           | Work                    |
+|      | R   | Team Leads/Work      | Work                    |
 
 The first day of a sprint comprises
 a /sprint retrospective/ on the previous sprint
@@ -221,28 +224,27 @@ simplifies meeting with our customer.
 Sprint planning meetings will proceed as follows:
 1. Customer confirms that the top stories on the backlog
    are indeed the top priority for implementation in the sprint.
-2. Senior members of the team (journeymen, masters) are assigned as owners for each story
-   in the sprint.
-3. For each story, the story owner will:
-   1. Estimate the story duration and enter the duration into the task tracker.
+2. Senior members of the team (masters, journeymen) are assigned as /team leads/
+   for each story in the sprint.
+3. For each story, the team lead will:
+   1. Estimate the story duration and enter the estimate into the task tracker.
    2. Break the story into tasks.
-   3. Assign owners to tasks.
+   3. Assign a team member as /owner/ of each tasks.
 4. For each task, the task owner will estimate task duration and enter it into the task tracker.
 No work should begin on a story until all these steps are completed.
 Our goal is to complete all the steps in class on the day of sprint planning.
 
 The single largest activity during class time is doing actual /work/ on the project.
 Other activities during the sprint are as follows.
-+ A /reading discussion/ of a paper or other reading that I will assign at the beginning
-  of the sprint.
++ /Reading discussion/ of a paper or other reading that I will assign at the
+  beginning of the sprint.
 + A /hot topic/ relevant to the class, the project, or to software development in general.
   Our speaker may be me, a member of the team, or a guest speaker.
 + Because you must know not only how to build a software system,
   but also how to deploy and administer it, each sprint will include
   a key topic related to /system administration/.
-+ On the last class day of a sprint,
-  I will chat individually with each of you in a /one-on-one/ meeting
-  that will last 5--10 minutes.
++ On the last class day of each sprint,
+  I will meet with team leads for a face-to-face update.
 
 At the beginning of the semester,
 we will spend one week on introduction and on-boarding activities,
@@ -258,7 +260,7 @@ followed by a two-week "mini-sprint" as shown in this table.
 |      | R   | Work                | Work                    |
 |------+-----+---------------------+-------------------------|
 |    3 | T   | Reading Discussion  | Hot Topic/Guest Speaker |
-|      | R   | One-on-One          | Work                    |
+|      | R   | Team Leads/Work     | Work                    |
 
 During /on-boarding/, the entire team focuses on getting up to speed with the development
 environment, tools, and processes to be employed during the semester. New students
@@ -293,7 +295,6 @@ You are responsible for checking Moodle regularly to keep up with assignment due
 other announcements posted to the site. For due dates, the Moodle calendar is your friend.
 
 * Evaluation
-
 Grades are assigned as follows.
 Details for each grade item appears below.
 
@@ -311,30 +312,43 @@ Details for each grade item appears below.
 
 Refer to my /Periodic Table of the Grades/ (on Moodle) for my standard grading scheme.
 I reserve the right to award a higher grade than strictly earned;
-outstanding attendance and class participation figure prominently in such decisions.
+outstanding attendance, class participation, and excellence in software develoment
+figure prominently in such decisions.
 
 ** Time Log
-
 Across campus, the expectation is that for each hour of course credit,
-you will spend one hour in class and two hours working outside of class.
+you will spend one hour /in class/ and two hours working /outside of class/.
 Because SWS is a four-credit class,
 the weekly expected workload is /twelve hours/ (including class time).
 
-You will be responsible for tracking your time spent in the in-class lab
-and working on your team project.
-Your weekly time log will include:
-+ Date, start time, stop time
-+ Duration
-+ Task
+Using our standard time tracking tool,
+you are responsible for tracking all your Software Studio time,
+including classes, team meetings, individual development, and self study.
 
-** Software Development
+** Software Development and Teamwork
+Most of your heads-down work for Software Studio takes place outside of class.
+Consequently, it is difficult for me to evaluate thoroughly your performance as
+a member of your software development team.
+During class, I will observe your participation with your team,
+your software development practices, and work with you to create and debug code.
+I will also evaluate team leads as part of our regular meetings at the
+conclusion of each sprint.
+Outside of class, I will inspect your commits to revision control,
+run code and tests you've written, and so forth.
 
-I will evaluate your software development by:
-+ Observation of your software development practices and process
-  during class.
-+ Inspection of source code and documentation
-  submitted to the revision control system.
-  I will look for:
+In addition, I rely on weekly peer evaluation
+from both /team leads/ and /team members/
+to supplement my limited observations.
+/Team leads/ evaluate team members on:
++ Participating as a member of the team, including:
+  - Availability to contribute to the project
+  - Working concurrently with other team members
+  - Conformance to customer requirements
+  - Making and keeping commitments regarding project deliverables
+  - Collaboration and cooperation with other team members
++ Exhibiting behaviors appropriate to the team member's level in the
+  class (i.e., apprentice, journeyman, master)
++ Excelling in software development, documentation, and testing, including:
   - Code organization, structure, and clarity
   - Sound use of design patterns
   - Good coding practices, adherence to common standards, naming, etc.
@@ -342,17 +356,16 @@ I will evaluate your software development by:
   - Separation of concerns (e.g., UI, logic, persistence)
   - Complete test coverage, ease of test execution
   - Clear, concise, and sufficient internal documentation (comments)
-+ Installation and execution of those portions of the software
-  to which you contributed.
-
-** Teamwork
-
-I will evaluate you on your participation as a member of the project team.
-A good team member will exhibit the behaviors outlined above for
-his or her corresponding level in the class.
+/Team members/ evaluate team leads on:
++ Interpreting customer requirements
++ Discharging responsibilities according to their level in the class (master,
+  journeyman)
++ Assigning and monitoring the team's work
++ Coordinating and facilitating group work
++ Providing process guidance to team members
++ Mentoring team members appropriate to their level in the class
 
 ** Scholarship
-
 You must demonstrate comprehension and application of the
 scholarly material we cover in class.
 Evidence I will look for includes:
@@ -382,8 +395,8 @@ paper on any additional insights you gleaned from your experience in the class t
 
 Type (double space) your paper. Use good spelling, grammar, punctuation, and
 structure. Your paper should be between 1,000 and 1,250 words long.
-** Final Deliverables (COS 472)
 
+** Final Deliverables (COS 472)
 As partial demonstration of their mastery of the discipline,
 /all/ CS&E students complete and present a substantial project
 during their senior year. All students are required to:
@@ -508,7 +521,6 @@ Observe these guidelines from our system administrators on the preparation of yo
 
 
 * Academic Integrity
-
 As a student at an institution whose goal is to honor Christ in all that it does, I expect
 you to uphold the strictest standards of academic integrity. You must do your own work,
 cite others when you present their work, and never misrepresent your academic performance
