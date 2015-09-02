@@ -1,5 +1,5 @@
 #+TITLE: SYS 390---Information Systems Analysis
-#+DATE: Fall, 2014
+#+DATE: Fall, 2015
 
 #+STARTUP: indent
 #+OPTIONS: toc:nil author:nil ':t
@@ -13,7 +13,7 @@
 #+LATEX_HEADER: \lhead{SYS 390---Information Systems Analysis}
 #+LATEX_HEADER: \chead{}
 #+LATEX_HEADER: \rhead{Course Syllabus}
-#+LATEX_HEADER: \lfoot{Fall 2014}
+#+LATEX_HEADER: \lfoot{Fall 2015}
 #+LATEX_HEADER: \cfoot{}
 #+LATEX_HEADER: \rfoot{Page \thepage\ of \pageref{LastPage}}
 #+LATEX_HEADER: \renewcommand{\headrulewidth}{0.4pt}
@@ -27,12 +27,12 @@ Director, Center for Missions Computing\\
 Office: Euler Science 211\\
 E-Mail: =tnurkkala@cse.taylor.edu=\\
 Phone: 765/998-5163\\
-Hours: MW 2:00-4:00 or by appointment\\
+Hours: MW 2:00-4:00, TR 1:00-2:00
 
 * Course Overview
 In this course, you will acquire knowledge and develop skills
-that will allow you to define and analyze an information system
-using a software development methodology.
+that will allow you to /define/ and /analyze/ an information system
+using a /software development methodology/.
 You will
 undertake requirements analysis,
 create data and process models,
@@ -62,7 +62,7 @@ Upon successful completion of this course, you should be able to:
 + Create wireframe mock-ups of an application
 
 * Text
-There is one required text for the course.\cite{valacich2012}
+There is no required text for the course.
 * Systems Analysis Project
 The emphasis in this course is to /learn/ systems analysis by /doing/ systems analysis.
 ** Written Deliverables
@@ -84,12 +84,12 @@ and produce two written deliverables:
    In a commercial context, of course,
    you would only create an SRS
    if the business analysis recommended a "build" solution.
-   However, because creating an SRS is a key learning in ISA,
-   you will create the SRS regardless of the recommendation in your business proposal.
+   However, because creating an SRS is a key learning outcome of ISA,
+   you will create the SRS /regardless/ of the recommendation in your business proposal.
 Your SRS will form the basis for building a working prototype of the system
-that you will develop during SYS 394 (ISD) during the spring term.
+that you will develop in SYS 394 (ISD) during the spring term.
 ** Formal Presentation
-Your team will make a formal presentation of the your business proposal and SRS at the end
+Your team will make a formal presentation of the your BP and SRS at the end
 of the semester. The client is invited to attend your presentation. If the client is
 unable to attend, I will stand in as a client proxy.
 
@@ -124,9 +124,10 @@ Refer to my /Periodic Table of the Grades/ (on Moodle) for the grading scheme. I
 the right to award a higher grade than strictly earned; outstanding attendance and class
 participation figure prominently in such decisions.
 ** Performance Appraisal
-Early in the semester, your team will agree on a performance appraisal.
+Early in the semester, your team will agree on a team performance appraisal.
 The performance appraisal lists criteria (e.g., "attends team meetings,"
-"delivers on commitments") by which your team will evaluate itself at the end of the term.
+"delivers on commitments") by which you will evaluate each team member
+at the end of the term.
 Prior to your final presentation,
 you will meet face-to-face as a team to evaluate one another according to these criteria.
 Your team will submit your completed performance appraisal
@@ -160,7 +161,7 @@ Why offer this option? Consider these illustrative scenarios:
 Note the following regarding the final exam:
 + Projects are submitted at the end of the semester
   and are large and complex to grade.
-  You will not have your final project grade
+  You will /not/ have your final project grade
   before you have to decide whether or not to take the final.
 + Because few take the exam, it's normally conducted as an oral exam.
 * Course Expectations
@@ -224,6 +225,3 @@ and Jesus as our Lord.
 Such a violation may result in your failing the course
 and other disciplinary action by the University.
 Refer to the Taylor catalog for the official statement of these ideas.
-
-#+LATEX: \bibliographystyle{plain}
-#+LATEX: \bibliography{courses}
