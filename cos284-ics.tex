@@ -1,0 +1,362 @@
+% Created 2016-02-02 Tue 21:42
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{fixltx2e}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage[margin=1.5in]{geometry}
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{COS 284---Introduction to Computer Systems}
+\chead{}
+\rhead{Course Syllabus}
+\lfoot{Spring 2016}
+\cfoot{}
+\rfoot{Page \thepage\ of \pageref{LastPage}}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\renewcommand\maketitle\relax
+\date{Spring, 2016}
+\title{COS 284---Introduction to Computer Systems}
+\hypersetup{
+ pdfauthor={Tom Nurkkala},
+ pdftitle={COS 284---Introduction to Computer Systems},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 24.5.1 (Org mode 8.3.3)}, 
+ pdflang={English}}
+\begin{document}
+
+\maketitle
+\section{Instructor}
+\label{sec:orgheadline1}
+\textbf{Dr. Tom Nurkkala}\\
+Associate Professor, Computer Science and Engineering\\
+Director, Taylor Center for Missions Computing\\
+Office: Euler Science Complex 211\\
+E-Mail: \texttt{tnurkkala@cse.taylor.edu}\\
+Phone: 8-5163\\
+Hours: MW~2:00-4:00, R~1:00-2:00, or by appointment\\
+
+\section{Credit}
+\label{sec:orgheadline2}
+This course is based on the Introduction to Computer Systems course at Carnegie Mellon
+University (CMU). Professors Randal Bryant and David O’Hallaron, who developed the course
+and wrote the textbook (Section 5), have generously made available course material
+(including notes, syllabi, laboratory exercises, and lecture slides) for use at other
+institutions. I make considerable use of their excellent materials throughout the course
+(including in this document!) and wish to credit and thank them.
+
+I have also drawn liberally from previous offerings of this course at Taylor University,
+and wish to thank Professor Jonathan Geisler for his kind assistance.
+
+\section{Course Overview}
+\label{sec:orgheadline3}
+The aim of the course is to help you become a better programmer by teaching you the basic
+concepts underlying all computer systems. I want you to learn what really happens when
+your programs run, so that when things go wrong (as they always do) you will have the
+intellectual tools to solve the problem.
+
+Why do you need to understand computer systems if you do all of your programming in
+high-level languages? In most of computer science, we're pushed to make abstractions and
+stay within their frameworks. But, any abstraction ignores effects that can become
+critical. As an analogy, Newtonian mechanics ignores relativistic effects. The Newtonian
+abstraction is completely appropriate for bodies moving at less than \(0.1c\), but higher
+speeds require working at a greater level of detail.
+
+The following ``realities'' are some of the major areas where the abstractions you've
+learned in previous classes break down:
+\begin{enumerate}
+\item \emph{An \texttt{int} isn't an integer; a \texttt{float} isn't a real}.
+Our finite representations of numbers have significant limitations,
+and because of these limitations
+we sometimes have to think in terms of bit-level representations.
+\item \emph{You've got to know assembly language}.
+Even if you never write programs in assembly,
+the behavior of a program sometimes cannot be understood
+based purely on the abstraction of a high-level language.
+Furthermore, understanding the effects of bugs
+requires familiarity with the machine-level model.
+\item \emph{Memory matters}.
+Computer memory is not unbounded.
+It must be allocated and managed.
+Memory referencing errors are especially pernicious.
+An erroneous updating of one object can cause a change
+in some logically unrelated object.
+Also, the combination of caching and virtual memory
+provides the functionality of a uniform unbounded address space,
+but not the performance.
+\item \emph{There is more to performance than asymptotic complexity}.
+Constant factors also matter.
+There are systematic ways to evaluate and improve program performance.
+\item \emph{Computers do more than execute instructions}.
+They also need to get data in and out
+and they interact with other systems over networks.
+\end{enumerate}
+
+By the end of the course, you will understand these realities in some detail.
+As a result, you will have learned skills and knowledge
+that will help you throughout your education and career as a computer scientist.
+
+\section{Learning Objectives}
+\label{sec:orgheadline4}
+
+By the end of the semester, you should be able to:
+
+\begin{enumerate}
+\item Describe how a computer represents integers internally.
+\item Convert twos complement binary values to decimal.
+\item Convert binary to decimal and hexadecimal.
+\item Understand how a computer represents fractional values.
+\item Convert a fractional decimal value to its IEEE single- or double-precision representation.
+\item Read x86 assembly code.
+\item Write simple x86 assembly functions.
+\item Describe how a computer executes a function call
+including parameters, return values, and the stack.
+\item Describe how compilers convert C code to x86 assembly.
+\item Explain how various C data structures are accessed in x86 assembly.
+\item Describe the motivation for a memory hierarchy.
+\item Explain how a memory hierarchy works.
+\item Understand how a cache is organized internally.
+\item Create programs that take advantage of the memory hierarchy.
+\item Explain how a linker works.
+\item Contrast static and dynamic linking.
+\item Explain what a system call is and how system calls work.
+\item Explain the fork system call.
+\item Explain the exec family of system calls.
+\item Describe how hardware and the operating system cooperate to deal with exceptional
+situations.
+\item Measure the performance of an application accurately.
+\item Improve the performance of an application based on good measurement techniques.
+\item Understand virtual memory and how it works.
+\item Explain the benefits of virtual memory.
+\item Explain the role of the translation look-aside buffer.
+\item Describe the virtual memory organization
+of a process running with Linux on an x86 processor.
+\item Explain how a dynamic memory allocator works.
+\item Be familiar with garbage collection.
+\item Be familiar with common memory bugs and how to avoid them.
+\item Explain what concurrent computation is and how to achieve it.
+\item Contrast process-based concurrency with I/O multiplexing-based concurrency.
+\item Describe why synchronization is necessary.
+\item Be familiar with how to achieve synchronization.
+\end{enumerate}
+
+\section{Texts}
+\label{sec:orgheadline5}
+The text by Bryant and O'Halaron~\cite{cs:app3} is required.
+We will refer to it as \texttt{CS:APP}.
+You may be able to make use of the previous edition~\cite{cs:app2} of the text,
+but I will not guarantee that all the material in the course will be
+covered by that edition.
+You are \emph{encouraged} to purchase---or have readily available---the
+updated edition of ``K\&R,'' the classic reference on C.\cite{k&r}
+
+It is \emph{very important} that you read carefully
+the assigned readings in the \texttt{CS:APP} book.
+You will get the most benefit if you read assigned passages
+\emph{before} they are covered in class.
+A detailed guide to reading assignments can be found in the course schedule.
+
+The textbook includes many practice problems throughout the body of each chapter. These
+are straightforward exercises that help you understand the material you have just read by
+using it \emph{immediately}. For self-study, solutions for all practice problems appear at the
+end of each chapter.
+
+In short, the best way to use the textbook to enhance your learning is as follows:
+\begin{enumerate}
+\item Read the assigned readings \emph{before} the corresponding class.
+\item Work the practice problems \emph{immediately} as you encounter them in the text.
+\item Check your work—and your understanding—with the answer key.
+\end{enumerate}
+
+\section{Topics}
+\label{sec:orgheadline6}
+These are the topics that could potentially be covered in the course.
+It is unlikely that we will have time to cover all this material.
+\begin{itemize}
+\item Course Overview
+\item Bits and Bytes
+\begin{itemize}
+\item Basics
+\item Integers
+\item Floating Point
+\end{itemize}
+\item Machine Programming
+\begin{itemize}
+\item Basics
+\item Control
+\item Procedures
+\item Data
+\item Advanced
+\end{itemize}
+\item Program Optimization
+\item Memory Hierarchy
+\item Cache Memory
+\item Linking
+\item Exceptional Control Flow
+\begin{itemize}
+\item Exceptions and Processes
+\item Signals and Non-Local Jumps
+\end{itemize}
+\item Virtual Memory
+\begin{itemize}
+\item Concepts
+\item Systems
+\end{itemize}
+\item Dynamic Memory
+\begin{itemize}
+\item Basic
+\item Advanced
+\end{itemize}
+\item Internetworking
+\begin{itemize}
+\item Network Programming
+\item Web Servers
+\end{itemize}
+\item Concurrent Programming
+\begin{itemize}
+\item Sychronization
+\end{itemize}
+\end{itemize}
+\section{Labs}
+\label{sec:orgheadline7}
+
+The labs come directly from the textbook authors. They have a very nice system set up so
+that you can test and submit all your programs online and will already know how you are
+doing on the assignment prior to submission. This should make it very easy to know when
+you have a correct solution and when you need to keep working.
+
+Please do not look for solutions online. Doing so constitutes cheating.  The authors have
+introduced randomness into the assignments so solutions posted by others may be wrong
+anyway.
+
+You will use Linux for all lab work. For some labs, you will be given a binary that works
+on the CSE machines, but should probably work on any recent vintage of Linux. For others,
+you are required to develop code for a Linux box. You may use any machine to develop, but
+\emph{it must run correctly on the CSE machines}. You must check your work on the machines in the
+laboratories before submitting it.
+
+Most low-level systems code is written in~C, and you will be required to do the same. You
+will also be required to read, understand, generate, or otherwise fiddle with x86 assembly
+on a Linux box.
+
+\section{Evaluation}
+\label{sec:orgheadline8}
+The grading scheme for the course will be announced in the next few days.
+
+\section{Moodle}
+\label{sec:orgheadline9}
+
+The Computer Science and Engineering department uses Moodle as our Learning Management
+System. The URL for Moodle is \url{https://moodle.cse.taylor.edu}. To sign on to the course site
+for the first time, you will need an enrollment key. The key for this course is
+\texttt{nerds4christ}.
+
+You are responsible for checking Moodle regularly to keep up with assignment due dates and
+other announcements posted to the site. For due dates, the Moodle calendar is your friend.
+\section{Classroom Expectations}
+\label{sec:orgheadline13}
+
+Following are my expectations about classroom conduct.
+
+\subsection{Attendance}
+\label{sec:orgheadline10}
+
+Attendance is required. I will be in class each day, and I expect you to be there also. I
+will log who attends class.
+
+In general, I am very understanding about students who must miss class due to a sanctioned
+Taylor activity, medical appointment, job interview, family emergency, and the like. If
+possible, let me know in advance that you will not be in class; I will work with you to
+arrange make-up instruction, homework, exams, etc.
+
+\subsection{Conduct}
+\label{sec:orgheadline11}
+
+I expect you to be prepared, awake, aware, and participatory during class. I will not
+hesitate to ask you to stand or move if you are distracted or sleepy.
+
+I expect you to join in discussions, respond to questions from me and from your
+colleagues, and ask questions of me. I expect you to hold my feet to the fire if I am
+being unclear, unkind, or contradictory.
+
+\subsection{Gizmos}
+\label{sec:orgheadline12}
+
+You may not use a laptop, tablet, or similar device to check e-mail, engage in social
+networking, surf the web, or any other activity not directly relevant to current classroom
+activity.
+
+If you use an electronic gizmo during class for legitimate academic purposes (e.g., note
+taking), be prepared to demonstrate relevant use on demand at any time.
+
+\section{Academic Integrity}
+\label{sec:orgheadline16}
+
+As a student at an institution whose goal is to honor Christ in all that it does, i expect
+you to uphold the strictest standards of academic integrity. You must do your own work,
+cite others when you present their work, and never misrepresent your academic performance
+in any way. Violation of these standards stains the reputations of you as a student,
+Taylor as an institution, and Jesus as our Lord. Such a violation may result in your
+failing the course and other disciplinary action by the University. Refer to the Taylor
+catalog for the official statement of these ideas.
+
+\subsection{What Constitutes Cheating?}
+\label{sec:orgheadline14}
+
+For purposes of this course, the following are \emph{non-exhaustive} examples of violations of
+academic integrity.
+
+\begin{enumerate}
+\item Sharing code or other electronic files by copying, retyping, looking at, or supplying a
+copy of a file from this or a previous semester. Be sure to store your work in
+protected directories, and screen lock or log off a lab machine to prevent others from
+copying your work without your explicit assistance.
+\item Sharing written assignments or exams by looking at, copying, or supplying an assignment
+or exam.
+\item Using other's code. Using code from this or previous offerings of the class, from
+courses at other institutions, or from any other source (e.g., software found on the
+Internet).
+\item Looking at other's code. Although mentioned above, it bears repeating. Looking at other
+students' code or allowing others to look at yours is cheating. There is no notion of
+looking “too much,” since no looking is allowed at all.
+\end{enumerate}
+
+\subsection{What Does Not Constitute Cheating?}
+\label{sec:orgheadline15}
+
+In contrast, the following are non-exhaustive examples of activities that do not violate
+academic integrity.
+
+\begin{enumerate}
+\item Clarifying ambiguities or vague points in class handouts or textbooks.
+\item Helping others use the computer systems, networks, compilers, debuggers, profilers, or
+other system facilities.
+\item Helping others with high-level design issues.
+\item Helping others with high-level (not code-based) debugging.
+\item Using code from the \texttt{CS:APP} website or from the class web pages.
+\end{enumerate}
+
+Be sure to store your work in protected directories, and log off when you leave an open
+cluster, to prevent others from copying your work without your explicit assistance.
+
+\bibliographystyle{plain}
+\bibliography{courses}
+\end{document}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

@@ -1,0 +1,468 @@
+% Created 2016-02-04 Thu 11:45
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{fixltx2e}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage[margin=1.5in]{geometry}
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{COS 371, 372, 471, 472---Software Studio}
+\chead{}
+\rhead{Course Syllabus}
+\lfoot{Spring 2016}
+\cfoot{}
+\rfoot{Page \thepage\ of \pageref{LastPage}}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\renewcommand\maketitle\relax
+\date{Spring 2016}
+\title{COS 371, 372, 471, 472---Software Studio}
+\hypersetup{
+ pdfauthor={Tom Nurkkala},
+ pdftitle={COS 371, 372, 471, 472---Software Studio},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 24.5.1 (Org mode 8.3.3)}, 
+ pdflang={English}}
+\begin{document}
+
+\maketitle
+
+\section{Instructor}
+\label{sec:orgheadline1}
+\textbf{Dr. Tom Nurkkala}\\
+Associate Professor, Computer Science and Engineering\\
+Director, Taylor Center for Missions Computing\\
+Office: Euler Science 211\\
+E-Mail: \texttt{tnurkkala@cse.taylor.edu}\\
+Phone: 8-5163\\
+Hours: MW 2:00-4:00, R 1:00-2:00, or by appointment
+\section{Objective}
+\label{sec:orgheadline2}
+\textbf{Software Studio trains you as a world-class software engineer}.
+We do this by engaging you in an agile, team-based software engineering organization
+that develops and delivers non-trivial software for real, external partners.
+As a result, you will acquire:
+\begin{itemize}
+\item Improved skills in all phases of the software development lifecycle
+\item Direct experience developing non-trivial software that is of sufficient maturity and
+quality to be deployed and used by our external partners
+\item Concrete skills in project management, software configuration management, and project
+feature and defect tracking
+\item Personal time management and tracking skills
+\item A deeper understanding of software engineering from current and historical literature on
+software engineering, programming, process, management, and related areas.
+\item Better written and spoken communication skills as you interact with your peers, our
+partners, and your instructor
+\item Specific skills in the languages, middleware, databases, and related technologies
+associated with our project work
+\end{itemize}
+In short, I want you to master all the practical and theoretical skills
+that will make you someone I would be delighted to hire
+for a challenging and responsible position as a professional software engineer.
+
+\section{Culture}
+\label{sec:orgheadline9}
+Studio inculcates a definite culture.
+Following are some of Studio's cultural characteristics.
+
+\subsection{Software Studio Delivers Working Products}
+\label{sec:orgheadline3}
+Many of your classes feature ``projects'' of different size and complexity.
+Software Studio is not one of them.
+Instead, our focus is on \emph{products}.
+Whereas a \emph{project} implies a kind of nebulous open-endedness,
+a \emph{product} is
+\emph{working software}
+that \emph{satisfies its design requirements}
+and is \emph{delivered} to a \emph{delighted} customer.
+
+\subsection{Software Studio is Opinionated}
+\label{sec:orgheadline4}
+The goal of Software Studio is to train you to be world-class software engineer.
+To get there, you need to know and wield powerful, world-class software tools.
+
+Studio is a \textbf{Unix} shop.
+Dating to the early 1970's,
+Unix remains the most powerful operating system in common use.
+It's true that Windows dominates the world's desktops.
+But if Windows is the backyard pool behind suburban houses worldwide,
+Unix is the North Sea: wild and powerful and
+filled with cargo freighters and battleships.
+In Studio, ``Unix'' includes various flavors and derivatives of the original OS,
+particularly \textbf{Linux}, but also \textbf{Mac OS}, \textbf{Android}, and \textbf{iOS}.
+
+Studio uses best-of-breed tools.
+I particularly recommend \textbf{Emacs}.
+Far more than a mere editor,
+\texttt{emacs} has been called an \emph{extensible computing environment}.
+Critically, it can be extended by its users to perform a myriad of amazing feats,
+just a fraction of which you will learn and leverage.
+Knowing other editors is helpful; I regularly use \texttt{vi} for small tasks.
+But if \texttt{vi} is a pontoon boat,
+\texttt{emacs} is a nuclear submarine. That flies. In space.
+
+Other best-of-breed technologies used in Software Studio include:
+\begin{itemize}
+\item \textbf{Ubuntu} as our standard Linux distribution
+\item \textbf{Git} and \textbf{Github} for revision control
+\item \textbf{Python}, \textbf{JavaScript}, \textbf{Objective-C} (iOS), \textbf{Java} (Android)
+\item \textbf{Django} backed by \textbf{SQLite} (development) and \textbf{PostgreSQL} (production)
+\item \textbf{Angular} backed by \textbf{Node}, \textbf{Express}, and \textbf{MongoDB}
+\item \textbf{React} and \textbf{Redux} for client side components
+\item \textbf{Trello} for project and sprint backlogs,
+together with \textbf{Plus for Trello} (Chrome extension) for time tracking and management.
+\item \textbf{Meteor} for real-time web applications
+\end{itemize}
+\subsection{Software Studio is Agile}
+\label{sec:orgheadline5}
+Studio embraces an agile software development methodology
+based largely on \textbf{Scrum}.
+We are driven by customer requirements,
+create software that is adaptable to change,
+and interact with our customers early and often during development.
+We also incorporate selected ideas from \textbf{Extreme Programming},
+\textbf{Kanban}, and \textbf{Pomodoro}.
+\subsection{Software Studio Emphasizes Service}
+\label{sec:orgheadline6}
+The products that we build serve a bigger purpose.
+We focus especially on software that meets the needs
+of the \textbf{global Christian missions community}
+or other non-profit and relief organizations.
+The \textbf{Taylor Center for Missions Computing}
+is a key partner in this regard.
+As a good citizen of the Taylor community,
+Studio also sometimes develops products for other parts of the university.
+\subsection{Software Studio is Intensely Practical}
+\label{sec:orgheadline7}
+Studio teaches you the skills necessary
+to deliver amazing products to our customers.
+We focus on two broad categories of skills:
+\emph{software} skills and \emph{system} skills.
+
+\textbf{Software skills} include requirements elicitation, coding, debugging, unit testing,
+revision control, continuous integration, continuous deployment,
+project management, code reviews, and defect tracking.
+
+\textbf{System skills} include, operating system virtualization; installation, configuration,
+maintenance, and administration of the operating system, network, database management
+system, and web server; software deployment; and disaster planning
+\subsection{Software Studio Fosters Teamwork}
+\label{sec:orgheadline8}
+To foster teamwork,
+we embrace the time-honored tradition of \emph{apprenticeship}.
+The medieval guild system classified practitioners into three groups:
+\emph{apprentice}, \emph{journeyman}, and \emph{master}.
+
+An \emph{apprentice} begun work as a young teen,
+contracted to a \emph{master} for five to nine years
+in order to learn the master's trade.
+The apprentice received no salary, but received room, board, and training
+in exchange for work done on the master's behalf.
+
+Upon learning the trade to the master's satisfaction,
+the apprentice was released from the contract to become a \emph{journeyman}.
+The term, derived from the French word for \emph{day},
+indicated that the journeyman was typically paid as a day laborer.
+For the next few years,
+the journeyman worked to hone
+his\footnote{Almost all participants in the medieval trades were men.}
+skills and establish his own business and clientele.
+
+After gaining sufficient experience,
+the journeyman created a \emph{master piece}
+as demonstration of his mastery of the trade.
+Full members of the craft guild---its \emph{masters}---evaluated the piece
+to determine whether it met the standards of the guild.
+If so, the journeyman was himself admitted into the guild as a \emph{master},
+which bestowed upon him both status and wealth.
+
+Students new to Software Studio are considered \emph{apprentices}.
+As they gain experience, they advance to become \emph{journeymen} and, finally, \emph{masters}.
+The following table connects these roles to time spent in Software Studio.
+
+\begin{center}
+\begin{tabular}{rll}
+\toprule
+Semester & Course & Level\\
+\midrule
+1 & COS 371 & Apprentice 1\\
+2 & COS 372 & Apprentice 2\\
+3 & COS 471 & Journeyman\\
+4 & COS 472 & Master\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+In Software Studio, our expectations for each group of practitioners
+include the following:
+\begin{enumerate}
+\item \emph{Apprentice}
+\begin{itemize}
+\item Focus on learning the tools and techniques we employ
+\item Contribute meaningfully to the product while learning
+\item Seek help from other team members when wedged
+\item Shoulder more responsibility throughout your first year
+\end{itemize}
+\item \emph{Journeyman}
+\begin{itemize}
+\item Focus on growing both the depth and the breadth of your understanding
+\item Share your knowledge with other team members---especially apprentices
+\item Learn how to learn on your own
+\item Know when to ask for help when you find yourself stuck on something new
+\item Engineer substantial portions of the product
+\item Prepare to shoulder the responsibilities of a master
+\end{itemize}
+\item \emph{Master}
+\begin{itemize}
+\item Focus on leading the team and delivering the product
+\item Actively seek to provide help to other team members when they're wedged
+\item Develop journeymen on the team to move them
+toward mastery---they will be taking your place soon
+\item Evaluate the performance of team members
+\item Take on the most challenging aspects of product development
+\item Continue to hone your understanding of new or advanced tools and techniques
+\item Interact with customer stakeholders to ensure a high quality product---one that
+conforms fully to customer requirements
+\end{itemize}
+\end{enumerate}
+\section{Content}
+\label{sec:orgheadline12}
+Software Studio is about \emph{software} and \emph{scholarship}.
+\subsection{Software}
+\label{sec:orgheadline10}
+The majority of your time will be devoted to the design, development,
+testing, and deployment of production-quality software systems.
+
+We use an agile software process based on the industry standard \textbf{Scrum} methodology.
+The semester is organized into (mostly) three-week sprints,
+giving us five sprints over the course of each 15-week semester.
+Except for the first sprint, our class time during each sprint will be spent roughly as
+illustrated in this table.
+
+\begin{center}
+\begin{tabular}{rlll}
+\toprule
+Week & Day & First Hour & Second Hour\\
+\midrule
+1 & T & Sprint Retrospective & Sprint Planning\\
+ & R & Work & Work\\
+\midrule
+2 & T & Reading Discussion & Hot Topic/Guest Speaker\\
+ & R & Work & Work\\
+\midrule
+3 & T & Sys Admin & Work\\
+ & R & Team Leads/Work & Work\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The first day of a sprint comprises
+a \emph{sprint retrospective} on the previous sprint
+and \emph{sprint planning} for the upcoming sprint.
+Combining these activities on the same class day
+simplifies meeting with our customer.
+Sprint planning meetings will proceed as follows:
+\begin{enumerate}
+\item Customer confirms that the top stories on the backlog
+are indeed the top priority for implementation in the sprint.
+\item Senior members of the team (masters, journeymen) are assigned as \emph{team leads}
+   for each story in the sprint.
+\item For each story, the team lead will:
+\begin{enumerate}
+\item Estimate the story duration and enter the estimate into the task tracker.
+\item Break the story into tasks.
+\item Assign a team member as \emph{owner} of each tasks.
+\end{enumerate}
+\item For each task, the task owner will estimate task duration and enter it into the task tracker.
+\end{enumerate}
+No work should begin on a story until all these steps are completed.
+Our goal is to complete all the steps in class on the day of sprint planning.
+
+The single largest activity during class time is doing actual \emph{work} on the project.
+Other activities during the sprint are as follows.
+\begin{itemize}
+\item \emph{Reading discussion} of a paper or other reading that I will assign at the
+beginning of the sprint.
+\item A \emph{hot topic} relevant to the class, the project, or to software development in general.
+Our speaker may be me, a member of the team, or a guest speaker.
+\item Because you must know not only how to build a software system,
+but also how to deploy and administer it, each sprint will include
+a key topic related to \emph{system administration}.
+\item On the last class day of each sprint,
+I will meet with team leads for a face-to-face update.
+\end{itemize}
+
+At the beginning of the semester,
+we will spend one week on introduction and on-boarding activities,
+followed by a two-week ``mini-sprint'' as shown in this table.
+
+\begin{center}
+\begin{tabular}{rlll}
+\toprule
+Week & Day & First Hour & Second Hour\\
+\midrule
+1 & T & Course Introduction & On-boarding\\
+ & R & On-boarding & \\
+\midrule
+2 & T & Sprint Planning & \\
+ & R & Work & Work\\
+\midrule
+3 & T & Reading Discussion & Hot Topic/Guest Speaker\\
+ & R & Team Leads/Work & Work\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+During \emph{on-boarding}, the entire team focuses on getting up to speed with the development
+environment, tools, and processes to be employed during the semester. New students
+(Apprentice 1) will each be assigned a senior member of the team (Master or Journeyman) as
+a mentor. The mentor is responsible to ensure that the apprentice has the proper
+environment and tools available, and that he or she understands all aspects of the
+development process sufficiently in order to begin contributing meaningfully to the
+product at the beginning of the mini-sprint.
+\subsection{Scholarship}
+\label{sec:orgheadline11}
+The \emph{reading discussion} and \emph{hot topic} activities mentioned above
+add to your \emph{scholarly understanding} through
+reading, discussion, and special speakers.
+Readings for the course can be either classic or current papers, magazine articles,
+and book chapters that address critical issues in software engineering.  Reading topics
+include requirements, design, construction, testing, maintenance, configuration, quality
+management, process, methods, and ethics.
+\section{Mechanics}
+\label{sec:orgheadline15}
+\subsection{Attendance}
+\label{sec:orgheadline13}
+Physical attendance is required. I will be in class each day, and I expect you to be there
+also. In general, I am very understanding about students who must miss class due to a
+sanctioned Taylor activity, job interview, family emergency, and the like. If possible,
+let me know in advance if you will not be in class. I will work with you to arrange
+make-up instruction, homework, quizzes, etc.
+
+\subsection{Moodle}
+\label{sec:orgheadline14}
+The Computer Science and Engineering department uses Moodle as our Learning Management
+System. The URL for Moodle is \url{https://moodle.cse.taylor.edu}.
+To sign on to the course site for the first time, you will need an enrollment key.
+The key for this course is \texttt{nerds4christ}.
+
+You are responsible for checking Moodle regularly to keep up with assignment due dates and
+other announcements posted to the site. For due dates, the Moodle calendar is your friend.
+
+\section{Evaluation}
+\label{sec:orgheadline16}
+Detailed grading criteria for the course will be announced in the next few days.
+\section{Final Deliverables}
+\label{sec:orgheadline19}
+Final deliverables are required of all students, as detailed in this section.
+
+\subsection{Final Deliverables for COS 371, 372, and 471}
+\label{sec:orgheadline17}
+Write a paper about your personal experience in Software Studio this term. The goal of
+this paper is not to critique the class, your project, or your team, but to reflect on
+your own experience in the class and how you matured as a software engineer.
+
+Your paper should address at least the following questions. As appropriate, include ideas
+from the reading and in-class presentations, your individual experience, and your personal
+participation on your project.
+\begin{itemize}
+\item What was the most important knowledge you acquired as it relates to your future as a
+professional software engineer?
+\item Similarly, what were the most important skills you acquired or honed?
+\item What did you learn about yourself as it relates to being a member of a team?
+\item How did your experience in the class speak to your vocational call as a Christ follower?
+\end{itemize}
+
+These questions are not intended to be exhaustive. You are encouraged to reflect in your
+paper on any additional insights you gleaned from your experience in the class this term.
+
+Type (double space) your paper. Use good spelling, grammar, punctuation, and
+structure. Your paper should be between 1,000 and 1,250 words long.
+
+\subsection{Final Deliverables for COS 472}
+\label{sec:orgheadline18}
+As partial demonstration of their mastery of the discipline,
+\emph{all} CS\&E students complete and present a substantial project
+during their senior year. All students are required to
+prepare and preset a poster regarding some aspect of their work
+during their degree program
+
+Most students satisfy this degree requirement
+through COS 492 (Senior Project).
+As a Software Studio student, you are not required to take COS 492;
+instead, you satisfy these requirements as part of Software Studio IV.
+
+An important decision that you should make early in your fourth semester of Software
+Studio (if not before) is the topic for your paper, presentation, and poster.
+You should meet with me no later than mid-term to discuss candidate topics.
+Here are some general guidelines:
+
+\begin{itemize}
+\item In your first three semesters of Software Studio, you wrote a simple experience paper.
+Your topic for Software Studio IV, however, must be much weightier.
+\item You may focus on one or more non-trivial projects that you undertook
+during your time in Software Studio.
+\item You may choose as your topic some idea related to Software Studio that was not the
+direct subject of one of your projects.
+\end{itemize}
+
+You will prepare a poster describing your work and present the poster to visitors who
+attend a poster session held by the department. Read, study, and evaluate past students'
+posters (displayed at various locations around the department) to get a better idea of
+what is expected of yours.
+
+Guidelines for the poster are as follows.
+
+\begin{enumerate}
+\item Use a clean, clear layout that employs good layout and design, clear fonts, meaningful
+colors, etc.
+\item Employ graphics (photos, illustrations, charts, graphs, figures, etc.) that enhance the
+poster's message.
+\item Make evident the topic of your poster and the contributions that your work in the area
+has made.
+\item Present your ideas logically and clearly so that your poster can be understood by a
+reader whether you are there to explain it or not.
+\end{enumerate}
+
+Observe these guidelines from our system administrators on the preparation of your poster.
+
+\begin{itemize}
+\item Most students use PowerPoint, although Adobe Illustrator is better designed to do
+large-format printing. We can print from most apps that can print (Photoshop, Word,
+Excel, Open Office, etc.), and can enlarge prints from page size to whatever poster size
+you need.
+\item We can print from PDFs, although we suggest that you provide the original file format if
+you are using an app that we support. We can also print from JPEGs if you simply wish to
+print photos.
+\item Our paper widths are 24, 36, and 42 inches. The printer is not capable of printing
+larger than 42 inches. Paper length is variable.
+\item Avoid using a dark background unless the dark background is important in conveying your
+message. Dark backgrounds require \emph{large} amounts of ink, can gunk up the print heads,
+and cost more to print.
+\item Visit \url{http://www.swarthmore.edu/NatSci/cpurrin1/posteradvice.htm} for sample templates
+that you may wish to use.
+\end{itemize}
+\section{Academic Integrity}
+\label{sec:orgheadline20}
+As a student at an institution whose goal is to honor Christ in all that it does, I expect
+you to uphold the strictest standards of academic integrity. You must do your own work,
+cite others when you present their work, and never misrepresent your academic performance
+in any way. Violation of these standards stains the reputations of you as a student,
+Taylor as an institution, and Jesus as our Lord. Such a violation will result in your
+failing the course and other disciplinary action by the University. Refer to the Taylor
+catalog for the official statement of these ideas.
+\end{document}

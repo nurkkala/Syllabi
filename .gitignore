@@ -3,8 +3,5 @@
 *.fls
 *.log
 *.out
-*.tex
 *.bbl
-*.pdf
 auto/
-*.graffle
