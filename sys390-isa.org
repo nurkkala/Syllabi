@@ -60,6 +60,7 @@ Upon successful completion of this course, you should be able to:
 + Perform logical data modeling
 + Perform user experience modeling for a complex business application
 + Create wireframe mock-ups of an application
++ Better understand Dilbert cartoons
 
 * Text
 There is no required text for the course.

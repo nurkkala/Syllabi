@@ -1,5 +1,5 @@
 #+TITLE: COS 371, 372, 471, 472---Software Studio
-#+DATE: Spring 2015
+#+DATE: Spring 2016
 
 #+STARTUP: indent
 #+OPTIONS: toc:nil author:nil ':t
@@ -13,7 +13,7 @@
 #+LATEX_HEADER: \lhead{COS 371, 372, 471, 472---Software Studio}
 #+LATEX_HEADER: \chead{}
 #+LATEX_HEADER: \rhead{Course Syllabus}
-#+LATEX_HEADER: \lfoot{Fall 2015}
+#+LATEX_HEADER: \lfoot{Spring 2016}
 #+LATEX_HEADER: \cfoot{}
 #+LATEX_HEADER: \rfoot{Page \thepage\ of \pageref{LastPage}}
 #+LATEX_HEADER: \renewcommand{\headrulewidth}{0.4pt}
@@ -27,8 +27,7 @@ Director, Taylor Center for Missions Computing\\
 Office: Euler Science 211\\
 E-Mail: =tnurkkala@cse.taylor.edu=\\
 Phone: 8-5163\\
-Hours: MW 2:00-4:00, TR 1:00-2:00
-
+Hours: MW 2:00-4:00, R 1:00-2:00, or by appointment
 * Objective
 *Software Studio trains you as a world-class software engineer*.
 We do this by engaging you in an agile, team-based software engineering organization
@@ -93,7 +92,8 @@ Other best-of-breed technologies used in Software Studio include:
 + *Git* and *Github* for revision control
 + *Python*, *JavaScript*, *Objective-C* (iOS), *Java* (Android)
 + *Django* backed by *SQLite* (development) and *PostgreSQL* (production)
-+ *AngularJS* backed by *NodeJS*, *Express*, and *MongoDB*
++ *Angular* backed by *Node*, *Express*, and *MongoDB*
++ *React* and *Redux* for client side components
 + *Trello* for project and sprint backlogs,
   together with *Plus for Trello* (Chrome extension) for time tracking and management.
 + *Meteor* for real-time web applications
@@ -295,88 +295,91 @@ You are responsible for checking Moodle regularly to keep up with assignment due
 other announcements posted to the site. For due dates, the Moodle calendar is your friend.
 
 * Evaluation
-Grades are assigned as follows.
-Details for each grade item appears below.
+Detailed grading criteria for the course will be announced in the next few days.
+* Final Deliverables
+Final deliverables are required of all students, as detailed in this section.
+# Grades are assigned as follows.
+# Details for each grade item appears below.
 
-#+ATTR_LATEX: :booktabs t
-| Course Work          | Weight |
-|----------------------+--------|
-|                      | <r>    |
-| Time Log             |    25% |
-| Software Development |    25% |
-| Teamwork             |    10% |
-| Scholarship          |    15% |
-| Final Deliverables   |    25% |
-|----------------------+--------|
-| Total                |   100% |
+# #+ATTR_LATEX: :booktabs t
+# | Course Work          | Weight |
+# |----------------------+--------|
+# |                      | <r>    |
+# | Time Log             |    25% |
+# | Software Development |    25% |
+# | Teamwork             |    10% |
+# | Scholarship          |    15% |
+# | Final Deliverables   |    25% |
+# |----------------------+--------|
+# | Total                |   100% |
 
-Refer to my /Periodic Table of the Grades/ (on Moodle) for my standard grading scheme.
-I reserve the right to award a higher grade than strictly earned;
-outstanding attendance, class participation, and excellence in software develoment
-figure prominently in such decisions.
+# Refer to my /Periodic Table of the Grades/ (on Moodle) for my standard grading scheme.
+# I reserve the right to award a higher grade than strictly earned;
+# outstanding attendance, class participation, and excellence in software develoment
+# figure prominently in such decisions.
 
-** Time Log
-Across campus, the expectation is that for each hour of course credit,
-you will spend one hour /in class/ and two hours working /outside of class/.
-Because SWS is a four-credit class,
-the weekly expected workload is /twelve hours/ (including class time).
+# ** Time Log
+# Across campus, the expectation is that for each hour of course credit,
+# you will spend one hour /in class/ and two hours working /outside of class/.
+# Because SWS is a four-credit class,
+# the weekly expected workload is /twelve hours/ (including class time).
 
-Using our standard time tracking tool,
-you are responsible for tracking all your Software Studio time,
-including classes, team meetings, individual development, and self study.
+# Using our standard time tracking tool,
+# you are responsible for tracking all your Software Studio time,
+# including classes, team meetings, individual development, and self study.
 
-** Software Development and Teamwork
-Most of your heads-down work for Software Studio takes place outside of class.
-Consequently, it is difficult for me to evaluate thoroughly your performance as
-a member of your software development team.
-During class, I will observe your participation with your team,
-your software development practices, and work with you to create and debug code.
-I will also evaluate team leads as part of our regular meetings at the
-conclusion of each sprint.
-Outside of class, I will inspect your commits to revision control,
-run code and tests you've written, and so forth.
+# ** Software Development and Teamwork
+# Most of your heads-down work for Software Studio takes place outside of class.
+# Consequently, it is difficult for me to evaluate thoroughly your performance as
+# a member of your software development team.
+# During class, I will observe your participation with your team,
+# your software development practices, and work with you to create and debug code.
+# I will also evaluate team leads as part of our regular meetings at the
+# conclusion of each sprint.
+# Outside of class, I will inspect your commits to revision control,
+# run code and tests you've written, and so forth.
 
-In addition, I rely on weekly peer evaluation
-from both /team leads/ and /team members/
-to supplement my limited observations.
-/Team leads/ evaluate team members on:
-+ Participating as a member of the team, including:
-  - Availability to contribute to the project
-  - Working concurrently with other team members
-  - Conformance to customer requirements
-  - Making and keeping commitments regarding project deliverables
-  - Collaboration and cooperation with other team members
-+ Exhibiting behaviors appropriate to the team member's level in the
-  class (i.e., apprentice, journeyman, master)
-+ Excelling in software development, documentation, and testing, including:
-  - Code organization, structure, and clarity
-  - Sound use of design patterns
-  - Good coding practices, adherence to common standards, naming, etc.
-  - Appropriate code reuse (no duplicate code, use of libraries, etc.)
-  - Separation of concerns (e.g., UI, logic, persistence)
-  - Complete test coverage, ease of test execution
-  - Clear, concise, and sufficient internal documentation (comments)
-/Team members/ evaluate team leads on:
-+ Interpreting customer requirements
-+ Discharging responsibilities according to their level in the class (master,
-  journeyman)
-+ Assigning and monitoring the team's work
-+ Coordinating and facilitating group work
-+ Providing process guidance to team members
-+ Mentoring team members appropriate to their level in the class
+# In addition, I rely on weekly peer evaluation
+# from both /team leads/ and /team members/
+# to supplement my limited observations.
+# /Team leads/ evaluate team members on:
+# + Participating as a member of the team, including:
+#   - Availability to contribute to the project
+#   - Working concurrently with other team members
+#   - Conformance to customer requirements
+#   - Making and keeping commitments regarding project deliverables
+#   - Collaboration and cooperation with other team members
+# + Exhibiting behaviors appropriate to the team member's level in the
+#   class (i.e., apprentice, journeyman, master)
+# + Excelling in software development, documentation, and testing, including:
+#   - Code organization, structure, and clarity
+#   - Sound use of design patterns
+#   - Good coding practices, adherence to common standards, naming, etc.
+#   - Appropriate code reuse (no duplicate code, use of libraries, etc.)
+#   - Separation of concerns (e.g., UI, logic, persistence)
+#   - Complete test coverage, ease of test execution
+#   - Clear, concise, and sufficient internal documentation (comments)
+# /Team members/ evaluate team leads on:
+# + Interpreting customer requirements
+# + Discharging responsibilities according to their level in the class (master,
+#   journeyman)
+# + Assigning and monitoring the team's work
+# + Coordinating and facilitating group work
+# + Providing process guidance to team members
+# + Mentoring team members appropriate to their level in the class
 
-** Scholarship
-You must demonstrate comprehension and application of the
-scholarly material we cover in class.
-Evidence I will look for includes:
-+ Demonstrated understanding of reading assignments through
-  coherent comments and questions during discussion
-+ Full participation in classroom discussions of papers and
-  special topics, and with guest speakers
-+ Willingness to present on special topics or to share
-  your knowledge in classroom discussion
+# ** Scholarship
+# You must demonstrate comprehension and application of the
+# scholarly material we cover in class.
+# Evidence I will look for includes:
+# + Demonstrated understanding of reading assignments through
+#   coherent comments and questions during discussion
+# + Full participation in classroom discussions of papers and
+#   special topics, and with guest speakers
+# + Willingness to present on special topics or to share
+#   your knowledge in classroom discussion
 
-** Final Deliverables (COS 371, 372, and 471)
+** Final Deliverables for COS 371, 372, and 471
 Write a paper about your personal experience in Software Studio this term. The goal of
 this paper is not to critique the class, your project, or your team, but to reflect on
 your own experience in the class and how you matured as a software engineer.
@@ -396,14 +399,12 @@ paper on any additional insights you gleaned from your experience in the class t
 Type (double space) your paper. Use good spelling, grammar, punctuation, and
 structure. Your paper should be between 1,000 and 1,250 words long.
 
-** Final Deliverables (COS 472)
+** Final Deliverables for COS 472
 As partial demonstration of their mastery of the discipline,
 /all/ CS&E students complete and present a substantial project
-during their senior year. All students are required to:
-
-1. Write a formal paper
-2. Deliver a formal presentation
-3. Prepare and present a poster
+during their senior year. All students are required to
+prepare and preset a poster regarding some aspect of their work
+during their degree program
 
 Most students satisfy this degree requirement
 through COS 492 (Senior Project).
@@ -422,69 +423,69 @@ Here are some general guidelines:
 + You may choose as your topic some idea related to Software Studio that was not the
   direct subject of one of your projects.
 
-Following is  detailed guidance on the three key deliverables for
-Software Studio IV.
+# Following is  detailed guidance on the three key deliverables for
+# Software Studio IV.
 
-*** Paper
+# *** Paper
 
-Prepare a formal paper that would be suitable for publication in a professional journal or
-for presentation as a report on professional software development. Observe the following
-guidelines.
+# Prepare a formal paper that would be suitable for publication in a professional journal or
+# for presentation as a report on professional software development. Observe the following
+# guidelines.
 
-1. You are responsible to determine the appropriate style and topic for your paper. I will
-   help.
-2. Your paper should be a minimum of eight to ten pages long
-   (between 2,000 and 2,500 words).
-3. You must submit a draft of your paper three weeks prior to the end of the semester so
-   that I have time to review it and you have time to revise it.
-4. The paper counts as 15% of your semester grade.
-5. The Computer Science and Engineering department will make your paper publically
-   available unless doing so would be restricted by the requirements of a journal or
-   conference for which your paper is accepted for publication.
-6. You are advised to seek writing assistance from the Writing Center, located in the
-   Academic Enrichment Center in the library.
-7. Your paper will be evaluated on the following criteria.
-   + Format and style appropriate to the topic
-   + Abstract gives a concise and complete overview of the paper
-   + Introduction justifies the utility of the paper and sets out a road map of the body
-     of the paper
-   + Overview of related work sets the contributions of the paper in context
-   + Body clearly communicates the essence of the work reported in the paper, including
-     research or engineering methodology, artifacts created, analysis and reporting
-     techniques employed, key procedures followed, etc.
-   + Concludes with a concise and accurate statement of the research performed,
-     development completed, and the specifics and significance of the results obtained
-   + Employs correct terminology and notation
-   + Uses correct spelling and grammar and reads clearly and cohesively; written in the
-     active voice
+# 1. You are responsible to determine the appropriate style and topic for your paper. I will
+#    help.
+# 2. Your paper should be a minimum of eight to ten pages long
+#    (between 2,000 and 2,500 words).
+# 3. You must submit a draft of your paper three weeks prior to the end of the semester so
+#    that I have time to review it and you have time to revise it.
+# 4. The paper counts as 15% of your semester grade.
+# 5. The Computer Science and Engineering department will make your paper publically
+#    available unless doing so would be restricted by the requirements of a journal or
+#    conference for which your paper is accepted for publication.
+# 6. You are advised to seek writing assistance from the Writing Center, located in the
+#    Academic Enrichment Center in the library.
+# 7. Your paper will be evaluated on the following criteria.
+#    + Format and style appropriate to the topic
+#    + Abstract gives a concise and complete overview of the paper
+#    + Introduction justifies the utility of the paper and sets out a road map of the body
+#      of the paper
+#    + Overview of related work sets the contributions of the paper in context
+#    + Body clearly communicates the essence of the work reported in the paper, including
+#      research or engineering methodology, artifacts created, analysis and reporting
+#      techniques employed, key procedures followed, etc.
+#    + Concludes with a concise and accurate statement of the research performed,
+#      development completed, and the specifics and significance of the results obtained
+#    + Employs correct terminology and notation
+#    + Uses correct spelling and grammar and reads clearly and cohesively; written in the
+#      active voice
 
-*** Presentation
+# *** Presentation
 
-Your ability to prepare and present an oral presentation in a professional setting is a
-key element of the course. In particular, it meets part of the Senior Comprehensive
-requirements and allows the course to be listed for SP credit. Observe these guidelines.
+# Your ability to prepare and present an oral presentation in a professional setting is a
+# key element of the course. In particular, it meets part of the Senior Comprehensive
+# requirements and allows the course to be listed for SP credit. Observe these guidelines.
 
-1. You are responsible to determine the appropriate content, style, and format for your
-   presentation. I will help.
-2. Your presentation should include professional-grade supporting visual materials.
-3. You must submit a draft of your presentation outline and visual materials three weeks
-   prior to the end of the semester so that I have time to review them and you have time
-   to revise them.
-4. Faculty and students of the department will be invited and encouraged to attend your
-   presentation.
-5. The presentation counts as 15% of your semester grade.
-6. Your presentation will be evaluated on the following criteria.
-   + Duration not to exceed 30 minutes, including audience Q&A
-   + Quality of visual material
-   + Appropriate mannerisms, eye contact, etc.
-   + Spoken fluency, conciseness, and cohesiveness
-   + Minimal verbal noise ("um," "like," "you know," etc.)
-   + Appropriate attire
-   + Proper use of terminology and grammar
-   + Sufficient coverage of salient ideas relevant to your topic
-   + Understandability and appropriateness of material to the target audience
+# 1. You are responsible to determine the appropriate content, style, and format for your
+#    presentation. I will help.
+# 2. Your presentation should include professional-grade supporting visual materials.
+# 3. You must submit a draft of your presentation outline and visual materials three weeks
+#    prior to the end of the semester so that I have time to review them and you have time
+#    to revise them.
+# 4. Faculty and students of the department will be invited and encouraged to attend your
+#    presentation.
+# 5. The presentation counts as 15% of your semester grade.
+# 6. Your presentation will be evaluated on the following criteria.
+#    + Duration not to exceed 30 minutes, including audience Q&A
+#    + Quality of visual material
+#    + Appropriate mannerisms, eye contact, etc.
+#    + Spoken fluency, conciseness, and cohesiveness
+#    + Minimal verbal noise ("um," "like," "you know," etc.)
+#    + Appropriate attire
+#    + Proper use of terminology and grammar
+#    + Sufficient coverage of salient ideas relevant to your topic
+#    + Understandability and appropriateness of material to the target audience
 
-*** Poster
+# *** Poster
 
 You will prepare a poster describing your work and present the poster to visitors who
 attend a poster session held by the department. Read, study, and evaluate past students'
@@ -518,8 +519,6 @@ Observe these guidelines from our system administrators on the preparation of yo
   and cost more to print.
 + Visit http://www.swarthmore.edu/NatSci/cpurrin1/posteradvice.htm for sample templates
   that you may wish to use.
-
-
 * Academic Integrity
 As a student at an institution whose goal is to honor Christ in all that it does, I expect
 you to uphold the strictest standards of academic integrity. You must do your own work,

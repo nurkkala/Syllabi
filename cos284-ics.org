@@ -1,5 +1,5 @@
 #+TITLE: COS 284---Introduction to Computer Systems
-#+DATE: Spring, 2014
+#+DATE: Spring, 2016
 
 #+STARTUP: indent
 #+OPTIONS: toc:nil author:nil ':t
@@ -13,7 +13,7 @@
 #+LATEX_HEADER: \lhead{COS 284---Introduction to Computer Systems}
 #+LATEX_HEADER: \chead{}
 #+LATEX_HEADER: \rhead{Course Syllabus}
-#+LATEX_HEADER: \lfoot{Spring 2014}
+#+LATEX_HEADER: \lfoot{Spring 2016}
 #+LATEX_HEADER: \cfoot{}
 #+LATEX_HEADER: \rfoot{Page \thepage\ of \pageref{LastPage}}
 #+LATEX_HEADER: \renewcommand{\headrulewidth}{0.4pt}
@@ -28,7 +28,7 @@ Director, Taylor Center for Missions Computing\\
 Office: Euler Science Complex 211\\
 E-Mail: =tnurkkala@cse.taylor.edu=\\
 Phone: 8-5163\\
-Hours: MW 2:00-4:00 or by appointment\\
+Hours: MW\nbsp{}2:00-4:00, R\nbsp{}1:00-2:00, or by appointment\\
 
 * Credit
 This course is based on the Introduction to Computer Systems course at Carnegie Mellon
@@ -128,8 +128,11 @@ By the end of the semester, you should be able to:
 33. Be familiar with how to achieve synchronization.
 
 * Texts
-The text by Bryant and O'Halaron\cite{cs:app} is required.
+The text by Bryant and O'Halaron\nbsp{}\cite{cs:app3} is required.
 We will refer to it as =CS:APP=.
+You may be able to make use of the previous edition\nbsp{}\cite{cs:app2} of the text,
+but I will not guarantee that all the material in the course will be
+covered by that edition.
 You are /encouraged/ to purchase---or have readily available---the
 updated edition of "K&R," the classic reference on C.\cite{k&r}
 
@@ -149,91 +152,38 @@ In short, the best way to use the textbook to enhance your learning is as follow
 2. Work the practice problems /immediately/ as you encounter them in the text.
 3. Check your work—and your understanding—with the answer key.
 
-* Schedule
-** Topics
-:PROPERTIES:
-:COLUMNS:  %30ITEM %3Classes %19Reading %4HW %10Lab
-:END:
-*** Course Overview
-:PROPERTIES:
-:Reading:  1
-:Classes:  1
-:END:
-*** Bits and Bytes
-**** Basics
-:PROPERTIES:
-:Reading:  2.1
-:Classes:  1
-:END:
-**** Integers
-:PROPERTIES:
-:Reading:  2.2--2.3
-:HW: 2a
-:Classes:  2
-:END:
-**** Floating Point
-:PROPERTIES:
-:Reading:  2.4
-:HW: 2b
-:Classes:  1
-:END:
-*** Machine Programming
-**** Basics 1
-:PROPERTIES:
-:Reading:  3.1--3.3
-:HW: 2c
-:Classes:  1
-:Lab: 
-:END:
-**** Basics 2
-:PROPERTIES:
-:Reading:  3.4--3.5, 3.13.1--3
-:Classes:  1
-:Lab:      Data Lab
-:END:
-**** Control
-:PROPERTIES:
-:Reading:  3.6, 3.13.4
-:Classes:  1
-:END:
-**** Procedures
-:PROPERTIES:
-:Reading:  3.7
-:HW: 3a
-:Classes:  1
-:END:
-**** Data 1
-:PROPERTIES:
-:Reading:  3.8
-:Classes:  1
-:END:
-**** Data 2
-:PROPERTIES:
-:Classes:  1
-:Reading:  3.9, 3.13.5
-:Lab:      Bomb Lab
-:END:
-**** Advanced 1
-**** Advanced 2
-*** Program Optimization
-*** Memory Hierarchy
-*** Cache Memory
-*** Linking
-*** Exceptional Control Flow
-**** Exceptions and Processes
-**** Signals and Non-Local Jumps
-*** Virtual Memory
-**** Concepts
-**** Systems
-*** Dynamic Memory
-**** Basic
-**** Advanced
-*** Internetworking
-**** Network Programming
-**** Web Servers
-*** Concurrent Programming
-**** Sychronization
-
+* Topics
+These are the topics that could potentially be covered in the course.
+It is unlikely that we will have time to cover all this material.
++ Course Overview
++ Bits and Bytes
+  - Basics
+  - Integers
+  - Floating Point
++ Machine Programming
+  - Basics
+  - Control
+  - Procedures
+  - Data
+  - Advanced
++ Program Optimization
++ Memory Hierarchy
++ Cache Memory
++ Linking
++ Exceptional Control Flow
+  - Exceptions and Processes
+  - Signals and Non-Local Jumps
++ Virtual Memory
+  - Concepts
+  - Systems
++ Dynamic Memory
+  - Basic
+  - Advanced
++ Internetworking
+  - Network Programming
+  - Web Servers
++ Concurrent Programming
+  - Sychronization
 * Labs
 
 The labs come directly from the textbook authors. They have a very nice system set up so
@@ -251,39 +201,38 @@ you are required to develop code for a Linux box. You may use any machine to dev
 /it must run correctly on the CSE machines/. You must check your work on the machines in the
 laboratories before submitting it.
 
-Most low-level systems code is written in~C, and you will be required to do the same. You
+Most low-level systems code is written in\nbsp{}C, and you will be required to do the same. You
 will also be required to read, understand, generate, or otherwise fiddle with x86 assembly
 on a Linux box.
 
 * Evaluation
+The grading scheme for the course will be announced in the next few days.
 
-The grading breakdown for the course is as follows:
+# The grading breakdown for the course is as follows:
 
-#+ATTR_LATEX: :booktabs t
-| Deliverable          | Weight |
-|----------------------+--------|
-|                      |    <r> |
-| Assignments (weekly) |    20% |
-| Labs (x6)            |    40% |
-| Exams (x3)           |    25% |
-| Final                |    15% |
-|----------------------+--------|
-| Total                |   100% |
+# #+ATTR_LATEX: :booktabs t
+# | Deliverable          | Weight |
+# |----------------------+--------|
+# |                      |    <r> |
+# | Assignments (weekly) |    20% |
+# | Labs (x6)            |    40% |
+# | Exams (x3)           |    25% |
+# | Final                |    15% |
+# |----------------------+--------|
+# | Total                |   100% |
 
-Refer to the Periodic Table of the Grades (on Moodle) for the grading scheme. I reserve
-the right to award a higher grade than strictly earned; outstanding attendance and class
-participation figure prominently in such decisions.
-
+# Refer to the Periodic Table of the Grades (on Moodle) for the grading scheme. I reserve
+# the right to award a higher grade than strictly earned; outstanding attendance and class
+# participation figure prominently in such decisions.
 * Moodle
 
 The Computer Science and Engineering department uses Moodle as our Learning Management
-System. The URL for Moodle is https://cms.cse.taylor.edu. To sign on to the course site
+System. The URL for Moodle is https://moodle.cse.taylor.edu. To sign on to the course site
 for the first time, you will need an enrollment key. The key for this course is
 =nerds4christ=.
 
 You are responsible for checking Moodle regularly to keep up with assignment due dates and
 other announcements posted to the site. For due dates, the Moodle calendar is your friend.
-
 * Classroom Expectations
 
 Following are my expectations about classroom conduct.
@@ -362,68 +311,68 @@ cluster, to prevent others from copying your work without your explicit assistan
 #+LATEX: \bibliographystyle{plain}
 #+LATEX: \bibliography{courses}
 
-| Wk | Day | Ln | Topic                            | Reading           | HW Due | Lab Due    | Exam            |
-|----+-----+----+----------------------------------+-------------------+--------+------------+-----------------|
-|    | <c> |    |                                  | <l>               | <l>    |            |                 |
-| 1  | W   |  1 | Overview                         | 1                 |        |            |                 |
-|    | F   |  2 | Bits and Bytes                   | 2.1               |        |            |                 |
-|----+-----+----+----------------------------------+-------------------+--------+------------+-----------------|
-|  2 | M   |  3 | Integers                         | 2.2-2.3           | Ch 2a  |            |                 |
-|    | W   |  4 |                                  |                   |        |            |                 |
-|    | F   |  5 | Floating Point                   | 2.4               | Ch 2b  |            |                 |
-|----+-----+----+----------------------------------+-------------------+--------+------------+-----------------|
-|  3 | M   |  6 | Machine Programming: Basics      | 3.1-3.3           | Ch 2c  |            |                 |
-|    | W   |  7 |                                  | 3.4-3.5, 3.13.1-3 |        | Data Lab   |                 |
-|    | F   |  8 | Machine Programming: Control     | 3.6, 3.13.4       |        |            |                 |
-|----+-----+----+----------------------------------+-------------------+--------+------------+-----------------|
-|  4 | M   |  9 | Machine Programming: Procedures  | 3.7               | Ch 3a  |            |                 |
-|    | W   | 10 | Machine Programming: Data        | 3.8               |        |            |                 |
-|    | F   | 11 |                                  | 3.9, 3.13.5       |        | Bomb Lab   |                 |
-|----+-----+----+----------------------------------+-------------------+--------+------------+-----------------|
-|  5 | M   | 12 | Machine Programming: Advanced    | 3.10-3.12         | Ch 3b  |            |                 |
-|    | W   | 13 |                                  | 3.14-3.15         |        |            |                 |
-|    | F   | 14 | Review for Exam 1                |                   | Ch 3c  |            |                 |
-|----+-----+----+----------------------------------+-------------------+--------+------------+-----------------|
-|  6 | M   | 15 | Program Optimization             | 5.1-5.5           |        |            | Exam 1 (Ch 1-3) |
-|    | W   | 16 |                                  | 5.6-5.10          |        | Buf Lab    |                 |
-|    | F   | 16 |                                  |                   |        |            |                 |
-|----+-----+----+----------------------------------+-------------------+--------+------------+-----------------|
-|  7 | M   | 17 |                                  | 5.11-5.15         |        |            |                 |
-|    | W   | 18 | Memory Hierarchy                 | 6.1-6.3           | Ch 5   |            |                 |
-|    | F   | 19 | Cache Memories                   | 6.4               |        |            |                 |
-|----+-----+----+----------------------------------+-------------------+--------+------------+-----------------|
-|  8 | M   | 20 |                                  | 6.5-6.7           |        |            |                 |
-|    | W   | 21 | Linking                          | 7.1-7.7           | Ch 6   |            |                 |
-|    | F   | 22 |                                  | 7.8-7.14          |        | Cache Lab  |                 |
-|----+-----+----+----------------------------------+-------------------+--------+------------+-----------------|
-|  9 | M   | 22 |                                  |                   |        |            |                 |
-|    | W   | 22 |                                  |                   |        |            |                 |
-|    | F   | 22 |                                  |                   |        |            |                 |
-|----+-----+----+----------------------------------+-------------------+--------+------------+-----------------|
-| 10 | M   | 22 |                                  |                   |        |            |                 |
-|    | W   | 23 | Review for Exam 2                |                   | Ch 7   |            |                 |
-|    | F   | 24 | ECF: Exceptions and Processes    | 8.1-8.3           |        |            | Exam 2 (Ch 5-7) |
-|----+-----+----+----------------------------------+-------------------+--------+------------+-----------------|
-| 11 | M   | 25 |                                  | 8.4               |        |            |                 |
-|    | W   | 26 | ECF: Signals and Non-Local Jumps | 8.5-8.8           |        |            |                 |
-|    | F   | 27 | Virtual Memory: Concepts         | 9.1-9.5           | Ch 8   |            |                 |
-|----+-----+----+----------------------------------+-------------------+--------+------------+-----------------|
-| 12 | M   | 28 |                                  | 9.6               |        | Shell Lab  |                 |
-|    | W   | 29 | Virtual Memory: Systems          | 9.7-9.8           |        |            |                 |
-|    | F   | 30 | Dynamic Memory: Basic            | 9.9               |        |            |                 |
-|----+-----+----+----------------------------------+-------------------+--------+------------+-----------------|
-| 13 | M   | 31 | Dynamic Memory: Advanced         | 9.10-9.11         |        |            |                 |
-|    | W   | 32 | Review for Exam 3                |                   | Ch 9   |            |                 |
-|    | F   | 33 | Inter-networking                 | 11.1-11.3         |        |            | Exam 3 (Ch 8-9) |
-|----+-----+----+----------------------------------+-------------------+--------+------------+-----------------|
-| 14 | M   | 34 |                                  |                   |        | Malloc Lab |                 |
-|    | W   | 35 | Network Programming              | 11.4              |        |            |                 |
-|    | F   | 36 | Web Servers                      | 11.5-11.6         |        |            |                 |
-|----+-----+----+----------------------------------+-------------------+--------+------------+-----------------|
-| 15 | M   | 37 | Concurrent Programming           | 12.1-12.3         | Ch 11  |            |                 |
-|    | W   | 38 |                                  |                   |        |            |                 |
-|    | F   | 39 | Synchronization: Basic           | 12.4-12.5.3       |        |            |                 |
-|----+-----+----+----------------------------------+-------------------+--------+------------+-----------------|
-| 16 | M   |    |                                  |                   | Ch 12  |            |                 |
-|    | W   |    |                                  |                   |        |            |                 |
-|    | F   |    |                                  |                   |        |            |                 |
+# | Wk | Day | Ln | Topic                            | Reading           | HW Due | Lab Due    | Exam            |
+# |----+-----+----+----------------------------------+-------------------+--------+------------+-----------------|
+# |    | <c> |    |                                  | <l>               | <l>    |            |                 |
+# | 1  | W   |  1 | Overview                         | 1                 |        |            |                 |
+# |    | F   |  2 | Bits and Bytes                   | 2.1               |        |            |                 |
+# |----+-----+----+----------------------------------+-------------------+--------+------------+-----------------|
+# |  2 | M   |  3 | Integers                         | 2.2-2.3           | Ch 2a  |            |                 |
+# |    | W   |  4 |                                  |                   |        |            |                 |
+# |    | F   |  5 | Floating Point                   | 2.4               | Ch 2b  |            |                 |
+# |----+-----+----+----------------------------------+-------------------+--------+------------+-----------------|
+# |  3 | M   |  6 | Machine Programming: Basics      | 3.1-3.3           | Ch 2c  |            |                 |
+# |    | W   |  7 |                                  | 3.4-3.5, 3.13.1-3 |        | Data Lab   |                 |
+# |    | F   |  8 | Machine Programming: Control     | 3.6, 3.13.4       |        |            |                 |
+# |----+-----+----+----------------------------------+-------------------+--------+------------+-----------------|
+# |  4 | M   |  9 | Machine Programming: Procedures  | 3.7               | Ch 3a  |            |                 |
+# |    | W   | 10 | Machine Programming: Data        | 3.8               |        |            |                 |
+# |    | F   | 11 |                                  | 3.9, 3.13.5       |        | Bomb Lab   |                 |
+# |----+-----+----+----------------------------------+-------------------+--------+------------+-----------------|
+# |  5 | M   | 12 | Machine Programming: Advanced    | 3.10-3.12         | Ch 3b  |            |                 |
+# |    | W   | 13 |                                  | 3.14-3.15         |        |            |                 |
+# |    | F   | 14 | Review for Exam 1                |                   | Ch 3c  |            |                 |
+# |----+-----+----+----------------------------------+-------------------+--------+------------+-----------------|
+# |  6 | M   | 15 | Program Optimization             | 5.1-5.5           |        |            | Exam 1 (Ch 1-3) |
+# |    | W   | 16 |                                  | 5.6-5.10          |        | Buf Lab    |                 |
+# |    | F   | 16 |                                  |                   |        |            |                 |
+# |----+-----+----+----------------------------------+-------------------+--------+------------+-----------------|
+# |  7 | M   | 17 |                                  | 5.11-5.15         |        |            |                 |
+# |    | W   | 18 | Memory Hierarchy                 | 6.1-6.3           | Ch 5   |            |                 |
+# |    | F   | 19 | Cache Memories                   | 6.4               |        |            |                 |
+# |----+-----+----+----------------------------------+-------------------+--------+------------+-----------------|
+# |  8 | M   | 20 |                                  | 6.5-6.7           |        |            |                 |
+# |    | W   | 21 | Linking                          | 7.1-7.7           | Ch 6   |            |                 |
+# |    | F   | 22 |                                  | 7.8-7.14          |        | Cache Lab  |                 |
+# |----+-----+----+----------------------------------+-------------------+--------+------------+-----------------|
+# |  9 | M   | 22 |                                  |                   |        |            |                 |
+# |    | W   | 22 |                                  |                   |        |            |                 |
+# |    | F   | 22 |                                  |                   |        |            |                 |
+# |----+-----+----+----------------------------------+-------------------+--------+------------+-----------------|
+# | 10 | M   | 22 |                                  |                   |        |            |                 |
+# |    | W   | 23 | Review for Exam 2                |                   | Ch 7   |            |                 |
+# |    | F   | 24 | ECF: Exceptions and Processes    | 8.1-8.3           |        |            | Exam 2 (Ch 5-7) |
+# |----+-----+----+----------------------------------+-------------------+--------+------------+-----------------|
+# | 11 | M   | 25 |                                  | 8.4               |        |            |                 |
+# |    | W   | 26 | ECF: Signals and Non-Local Jumps | 8.5-8.8           |        |            |                 |
+# |    | F   | 27 | Virtual Memory: Concepts         | 9.1-9.5           | Ch 8   |            |                 |
+# |----+-----+----+----------------------------------+-------------------+--------+------------+-----------------|
+# | 12 | M   | 28 |                                  | 9.6               |        | Shell Lab  |                 |
+# |    | W   | 29 | Virtual Memory: Systems          | 9.7-9.8           |        |            |                 |
+# |    | F   | 30 | Dynamic Memory: Basic            | 9.9               |        |            |                 |
+# |----+-----+----+----------------------------------+-------------------+--------+------------+-----------------|
+# | 13 | M   | 31 | Dynamic Memory: Advanced         | 9.10-9.11         |        |            |                 |
+# |    | W   | 32 | Review for Exam 3                |                   | Ch 9   |            |                 |
+# |    | F   | 33 | Inter-networking                 | 11.1-11.3         |        |            | Exam 3 (Ch 8-9) |
+# |----+-----+----+----------------------------------+-------------------+--------+------------+-----------------|
+# | 14 | M   | 34 |                                  |                   |        | Malloc Lab |                 |
+# |    | W   | 35 | Network Programming              | 11.4              |        |            |                 |
+# |    | F   | 36 | Web Servers                      | 11.5-11.6         |        |            |                 |
+# |----+-----+----+----------------------------------+-------------------+--------+------------+-----------------|
+# | 15 | M   | 37 | Concurrent Programming           | 12.1-12.3         | Ch 11  |            |                 |
+# |    | W   | 38 |                                  |                   |        |            |                 |
+# |    | F   | 39 | Synchronization: Basic           | 12.4-12.5.3       |        |            |                 |
+# |----+-----+----+----------------------------------+-------------------+--------+------------+-----------------|
+# | 16 | M   |    |                                  |                   | Ch 12  |            |                 |
+# |    | W   |    |                                  |                   |        |            |                 |
+# |    | F   |    |                                  |                   |        |            |                 |

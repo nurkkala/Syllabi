@@ -1,5 +1,5 @@
 #+TITLE: SYS 394---Information Systems Design
-#+DATE: Spring, 2014
+#+DATE: Spring, 2016
 
 #+STARTUP: indent
 #+OPTIONS: toc:nil author:nil ':t
@@ -13,7 +13,7 @@
 #+LATEX_HEADER: \lhead{SYS 394---Information Systems Design}
 #+LATEX_HEADER: \chead{}
 #+LATEX_HEADER: \rhead{Course Syllabus}
-#+LATEX_HEADER: \lfoot{Spring 2014}
+#+LATEX_HEADER: \lfoot{Spring 2016}
 #+LATEX_HEADER: \cfoot{}
 #+LATEX_HEADER: \rfoot{Page \thepage\ of \pageref{LastPage}}
 #+LATEX_HEADER: \renewcommand{\headrulewidth}{0.4pt}
@@ -27,7 +27,7 @@ Director, Taylor Center for Missions Computing\\
 Office: Euler Science Complex 211\\
 E-Mail: =tnurkkala@cse.taylor.edu=\\
 Phone: 8-5163\\
-Hours: MW 2:00-4:00 or by appointment\\
+Hours: MW\nbsp{}2:00-4:00, R\nbsp{}1:00-2:00, or by appointment\\
 * Course Overview
 The course focuses on the physical design and construction phases
 of the system development life cycle.
@@ -53,16 +53,16 @@ When you complete this class you should be able to:
 1. Understand the importance of a formal system development methodology to information
    technology project success
 2. Learn how to translate a logical design to a physical design
-3. Improve user interface design skills
-4. Learn agile software project management practices and tools
-5. Sharpen group participation skills
-6. Expand relational database skills, including SQL transactions, and stored procedures
-7. Learn some technologies powering e-commerce: three-tier architecture, web pages,
-   ASP.NET, Visual Basic
-8. Learn and apply testing skills, including unit tests and client-side GUI tests
-9. Improve presentation skills by sharing project results with the class
+3. Apply user interface design skills
+4. Employ agile software project management practices and tools
+5. Participate effectively on a software development team
+6. Demonstrate relational database skills in both SQL data definition and data manipulation
+7. Use key technologies powering modern web applications: three-tier architecture, web pages,
+   development tools, and servers
+8. Apply testing skills, including unit tests and client-side GUI tests
+9. Present effectively the results of your work to others
 * Text
-We will continue to use the textbook from ISA.\cite{valacich2012}
+There is no required text for the course.
 * Project
 We will continue the project begun in ISA. Our goal is to build working prototypes of a
 system that implements the bulk of the system you envisioned in your SRS in ISA.
@@ -79,7 +79,7 @@ The survey also asks you to indicate who you would---and would not---like
 to have on your team.
 Although a good balance of skills will trump your personal preferences,
 I do my best to honor your request.
-** DevelopmentProcess
+** Development Process
 Teams will employ a development process
 based on the standard agile process known as /Scrum/.
 We will employ an iterative approach to project development
@@ -87,7 +87,7 @@ in which your team will focus on delivering
 small increments of functionality
 that provide both you and me a clear and demonstrable indication of your progress.
 
-As in ISA, procrastination is the enemy.
+As in ISA, *procrastination is the enemy*.
 Using an agile, iterative process forces you and your team
 regularly to deliver working software,
 which not only gives you a clear view of your accomplishments,
@@ -98,34 +98,15 @@ during which you will demonstrate your prototype application.
 Our customer will be invited to join us for your demonstrations,
 either in person or electronically.
 
-Although this presentation is not nearly as formal as your final presentation in ISA,
+Although this presentation is not /nearly/ as formal as your final presentation in ISA,
 it is nonetheless your opportunity to show off the fruit of a year of your labor.
 Begin the semester with this end in mind,
 and stay focused on delivering an excellent and exciting final product!
 ** Technology
-We will be building the project prototypes using current versions
-of the Microsoft tool chain.
-Although Microsoft is not a favorite platform of mine,
-it is ubiquitous in business and deserves your careful attention.
-
-1. We will develop using Microsoft Visual Studio, which is a very capable integrated
-   development environment (IDE) that is quite accessible for CS&E and non-CS&E majors
-   alike.
-2. We will deploy our application prototypes using a development version of the standard
-   Microsoft Internet Information Server (IIS), the standard Microsoft web server.
-3. Our database will be Microsoft SQL Server,
-   which includes Microsoft SQL Server
-   Management Studio,
-   a graphical front-end to the database manager itself.
-4. Your web application will make heavy use of
-   Microsoft’s =.Net= ("dot net") framework,
-   including Active Server Pages (=ASP.Net=).
-5. Your application will be written primarily in Microsoft Visual Basic
-   and in Microsoft SQL Server stored procedures.
-   Although the =.Net= platform supports
-   other programming languages---notably =C#= ("see sharp")---we will stick
-   with Visual Basic, which is full member of the =.Net= language family
-   yet employs a clear and simple syntax that is easy for all students to learn.
+We will be building the project prototypes using
+standard tools and libraries in the Python ecosystem.
+Thus, you will be able to leverage your experience
+from COS\nbsp{}120 and any other exposure you've had to Python.
 * Classroom Expectations
 Following are my expectations about classroom conduct.
 ** Attendance
@@ -154,32 +135,33 @@ or any other activity not directly relevant to current classroom activity.
 If you use an electronic gizmo during class
 for legitimate academic purposes (e.g., note taking),
 be prepared to demonstrate relevant use on demand at any time.
-*  Moodle
+* Moodle
 The Computer Science and Engineering department uses Moodle as our Learning Management
-System. The URL for Moodle is https://cms.cse.taylor.edu. To sign on to the course site
+System. The URL for Moodle is https://moodle.cse.taylor.edu. To sign on to the course site
 for the first time, you will need an enrollment key. The key for this course is
 =nerds4christ=.
 
 You are responsible for checking Moodle regularly to keep up with assignment due dates and
 other announcements posted to the site. For due dates, /the Moodle calendar is your friend/.
 * Evaluation
-The grading breakdown for the course is as follows:
+The grading scheme for the course will be announced in the next few days.
+# The grading breakdown for the course is as follows:
 
-#+ATTR_LATEX: :booktabs t
-| Deliverable       | Weight |
-|-------------------+--------|
-|                   |    <r> |
-| Labs and Homework |    20% |
-| Term Project      |    40% |
-| Midterm Exam      |    20% |
-| Final Exam        |    20% |
-|-------------------+--------|
-| Total             |   100% |
+# #+ATTR_LATEX: :booktabs t
+# | Deliverable       | Weight |
+# |-------------------+--------|
+# |                   |    <r> |
+# | Labs and Homework |    20% |
+# | Term Project      |    40% |
+# | Midterm Exam      |    20% |
+# | Final Exam        |    20% |
+# |-------------------+--------|
+# | Total             |   100% |
 
-Refer to the Periodic Table of the Grades (on Moodle) for my grading scheme.
-I reserve the right to award a higher grade than strictly earned;
-outstanding attendance and class participation
-figure prominently in such decisions.
+# Refer to the Periodic Table of the Grades (on Moodle) for my grading scheme.
+# I reserve the right to award a higher grade than strictly earned;
+# outstanding attendance and class participation
+# figure prominently in such decisions.
 * Academic Integrity
 As a student at an institution whose goal is to honor Christ in all that it does,
 I expect you to uphold the strictest standards of academic integrity.
@@ -194,5 +176,5 @@ Such a violation will result in your failing the course
 and other disciplinary action by the University.
 Refer to the Taylor catalog for the official statement of these issues.
 
-#+LATEX: \bibliographystyle{plain}
-#+LATEX: \bibliography{courses}
+# #+LATEX: \bibliographystyle{plain}
+# #+LATEX: \bibliography{courses}

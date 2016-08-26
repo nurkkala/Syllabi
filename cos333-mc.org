@@ -1,5 +1,5 @@
 #+TITLE: COS 333---Missions Computing
-#+DATE: January 2015
+#+DATE: January 2016
 
 #+STARTUP: indent
 #+OPTIONS: toc:nil author:nil ':t
@@ -13,7 +13,7 @@
 #+LATEX_HEADER: \lhead{COS 333---Missions Computing}
 #+LATEX_HEADER: \chead{}
 #+LATEX_HEADER: \rhead{Course Syllabus}
-#+LATEX_HEADER: \lfoot{January 2015}
+#+LATEX_HEADER: \lfoot{January 2016}
 #+LATEX_HEADER: \cfoot{}
 #+LATEX_HEADER: \rfoot{Page \thepage\ of \pageref{LastPage}}
 #+LATEX_HEADER: \renewcommand{\headrulewidth}{0.4pt}
@@ -28,14 +28,13 @@ Office: Euler Science 211\\
 E-Mail: =tnurkkala@cse.taylor.edu=\\
 Phone: 765/998-5163\\
 Hours: MW 2:00-4:00 or by appointment\\
-
 * Introduction
 Missions Computing is a course primarily intended for students in Computer Science and
 Engineering who wish to engage in service-learning activities—particularly software
 development—with a partner in the international missions community.
 
-Admission to the course is by instructor permission. This course carries cross cultural
-(CC) credit.
+Admission to the course is by instructor permission.
+This course carries cross cultural (CC) credit.
 * Objectives
 The Missions Computing course engages you directly in missions computing
 in an international context where missions computing systems
@@ -170,4 +169,3 @@ and Jesus as our Lord.
 Such a violation may result in your failing the course
 and other disciplinary action by the University.
 Refer to the Taylor catalog for the official statement of these ideas.
-
