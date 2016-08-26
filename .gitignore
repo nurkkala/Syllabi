@@ -1,7 +1,15 @@
+# TeX output files
 *.aux
 *.blg
 *.fls
 *.log
 *.out
 *.bbl
+*.fdb_latexmk
+
+# Emacs auto cache.
 auto/
+
+# This entry will ignore PDFs created from top-level TeX files, but not those
+# that have been moved to (e.g.) the archive/ directory.
+/*.pdf
