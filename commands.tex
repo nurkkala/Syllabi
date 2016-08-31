@@ -1,0 +1,16 @@
+\newcommand{\syllabuslayout}[2]{
+  \usepackage[margin=1.5in]{geometry}
+  \usepackage{lastpage}
+
+  \usepackage{fancyhdr}
+  \renewcommand{\headrulewidth}{0.4pt}
+  \renewcommand{\footrulewidth}{0.4pt}
+  \pagestyle{fancy}
+
+  \lhead{Course Syllabus}
+  \chead{}
+  \rhead{Page \thepage\ of \pageref{LastPage}}
+  \lfoot{#1}
+  \cfoot{#2}
+  \rfoot{Fall 2016}
+}

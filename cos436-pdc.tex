@@ -1,0 +1,161 @@
+\documentclass[11pt]{article}
+
+\input{commands}
+\syllabuslayout{COS~436}{Parallel and Distributed Computing}
+
+\usepackage[colorlinks=true,allcolors=blue]{hyperref}
+\usepackage{booktabs}
+\usepackage{comment}
+
+\usepackage{biblatex}
+\addbibresource{courses.bib}
+
+\begin{document}
+
+\section{Instructor}
+
+\input{tom-details}
+
+\section{Course Overview}
+
+Most---if not all---of the courses
+you have taken so far in computer science
+have focused on algorithms and programs
+for a single processor.
+This approach to learning makes a great deal of sense.
+It's plenty hard to write and debug programs
+on a single processor;
+why complicate matters with more than one?
+
+For a variety of reasons that we'll discuss,
+the world hasn't run exclusively on one-processor computers
+for a long time.
+Back in~2001, IBM released the first
+two-core microprocessor---the Power4.\cite{ibm-power4}
+As we'll see,
+since that watershed introduction,
+multi-core, many-core, and massively parallel processors
+have taken the world by storm.
+You must understand these architectures
+and be able to write and debug programs on them
+in order to be competitive in the modern computing landscape.
+
+In this course,
+we will study
+multi-core CPUs,
+many-core GPUs,
+and a variety of tools, technologies, and techniques
+that will help you
+design and write software
+that maximizes the performance of modern computer systems.
+
+\section{Learning Objectives}
+
+Upon successful completion of this course, you should be able to:
+
+\begin{enumerate}
+\item Explain the history of high-performance computing
+  and place modern parallel and distributed computing
+  in its historical context.
+\item Differentiate parallel computing
+  from distributed computing.
+\item Differentiate parallelism and concurrency.
+\item Explain Flynn's taxonomy of parallel architectures.
+\item Differentiate uniprocessor, many-core, and multi-core computer architectures.
+\item Apply decomposition and design strategies
+  for various parallel problems and architectures.
+\item Formulate and implement efficient parallel versions of sequential algorithms.
+\item Measure parallel algorithm performance.
+\item Calculate parallel speedup and efficiency.
+\item Employ a threaded model of parallel computation,
+  including common parallel programming constructs
+  like semaphores, shared memory, and monitors.
+\item Build correct and performant software
+  for both shared- and distributed-memory multicomputers
+  using OpenMP and MPI.
+\item Understand the host-device model
+  for modern, general-purpose graphics processing units (GPUs).
+\item Build correct and performant software for GPUs.
+\item Construct hybrid parallel programs
+  that execute cooperatively on both CPU and GPU cores.
+\end{enumerate}
+
+\section{Texts}
+
+There is one \textbf{required} text:
+\begin{itemize}
+\item Barlas~\cite{barlas2014multicore}
+\end{itemize}
+You may also wish to acquire access to the following \textbf{recommended} texts:
+\begin{itemize}
+\item Cheng, et.\ al.~\cite{cheng2014professional}
+\item Wilt~\cite{wilt2013cuda}
+\item Storti and Yurtoglu~\cite{storti2015cuda}
+\end{itemize}
+You can order the textbook online,
+but you may also wish to consider joining Safari Books Online~\cite{safari}.
+Over the course of the semester,
+Safari will cost about the same as the price of Barlas,
+but will give you access to the other resources mentioned above
+\emph{and} a ton of other great technical books, videos, and other resources.
+I have been a member of Safari for many years,
+and I find it to be an invaluable technical resource.\footnote{I receive no compensation
+  from Safari for this endorsement.}
+
+\section{Evaluation}
+
+The grading breakdown
+for the course
+is shown in table~\ref{tab:grading}.
+Refer to my \emph{Periodic Table of the Grades} (on Moodle) for the grading scheme. I reserve
+the right to award a higher grade than strictly earned; outstanding attendance and class
+participation figure prominently in such decisions.
+
+\begin{table}[htb]
+  \centering
+  % BEGIN RECEIVE ORGTBL grades
+  \begin{tabular}{lr}
+    \toprule
+    Category & Weight \\
+    \midrule
+    Homework & 35\%   \\
+    Exam 1   & 20\%   \\
+    Exam 2   & 20\%   \\
+    Final    & 25\%   \\
+    \midrule
+    Total    & 100\%  \\
+    \bottomrule
+  \end{tabular}
+  % END RECEIVE ORGTBL grades
+  \caption{Grading details}
+  \label{tab:grading}
+\end{table}
+
+\begin{comment}
+  #+ORGTBL: SEND grades orgtbl-to-latex :booktabs t
+  | Category | Weight |
+  |----------+--------|
+  | <l>      |    <r> |
+  | Homework |    35% |
+  | Exam 1   |    20% |
+  | Exam 2   |    20% |
+  | Final    |    25% |
+  |----------+--------|
+  | Total    |   100% |
+\end{comment}
+
+\section{Course Expectations}
+
+\input{expectations}
+
+\printbibliography{}
+
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
+
+%  LocalWords:  ISD Kepner Tregoe SRS ISA llllll christ multi OpenMP MPI GPUs
+%  LocalWords:  GPU Barlas Cheng et al Storti Yurtoglu

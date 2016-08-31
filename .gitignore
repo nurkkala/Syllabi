@@ -6,9 +6,12 @@
 *.out
 *.bbl
 *.fdb_latexmk
+*.bcf
+*.run.xml
 
-# Emacs auto cache.
+# Emacs
 auto/
+_region_.tex
 
 # This entry will ignore PDFs created from top-level TeX files, but not those
 # that have been moved to (e.g.) the archive/ directory.
