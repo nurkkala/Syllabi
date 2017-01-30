@@ -1,0 +1,205 @@
+\documentclass[11pt]{article}
+
+\input{commands}
+\syllabuslayout{SYS~394}{Information Systems Design}{Spring}
+
+\usepackage[colorlinks=true,allcolors=blue]{hyperref}
+\usepackage{booktabs}
+\usepackage{comment}
+
+\usepackage{biblatex}
+\addbibresource{courses.bib}
+
+\begin{document}
+
+\section{Instructor}
+
+\input{tom-details}
+
+\section{Course Overview}
+
+This course focuses on the physical design and construction phases
+of the system development life cycle.
+Our goal is to implement a working prototype
+of the system defined and analyzed in SYS~390~(ISA)
+as a database-backed web application.
+We will cover web and database programming,
+advanced SQL topics,
+software project management practices,
+system architecture,
+and related web technology.
+
+The course comprises two hands-on, lab-heavy segments.
+\begin{enumerate}
+\item
+  For approximately the first five weeks,
+  we will focus on the basics of developing
+  a database-backed web application.
+  This portion of the course is designed
+  to provide everyone in the class
+  with the knowledge and skills
+  necessary to understand and construct a non-trivial web application.
+  We will cover salient topics in class,
+  and you will complete a series of lab exercises
+  that give you practice with the topic of the day.
+\item
+  For the remaining ten weeks of the course,
+  you will and your team will construct a prototype application
+  that implements the requirements you gathered in ISA
+  as reflected in your System Requirements Specification (SRS).
+\end{enumerate}
+
+\section{Learning Objectives}
+
+When you complete this class you should be able to:
+\begin{enumerate}
+\item Understand the importance
+  of a formal system development methodology
+  to information technology project success
+\item Translate a logical design to a physical design
+\item Apply user interface design skills
+\item Employ agile software project management practices and tools
+\item Participate effectively on a software development team
+\item Demonstrate relational database skills
+  in both SQL data definition and data manipulation
+\item Make effective use of distributed revision control.
+\item Use key technologies powering modern web applications:
+  three-tier architecture, web pages,
+  development tools, and servers
+\item Apply testing skills,
+  including unit tests and client-side GUI tests
+\item Present effectively the results of your work to others
+\end{enumerate}
+
+\section{Text}
+
+There is no required text for the course.
+
+\section{Project}
+
+We will continue the project begun in ISA.
+Our goal is to build working prototypes
+of a system that implements the bulk of the requirements
+you envisioned in your SRS in ISA.
+
+\subsection{Teams}
+
+Again this semester, you will work in teams,
+typically comprising 3--4 students.
+Unlike ISA, however, I will select the members of the teams
+in order to ensure each team has a fair balance
+of technical and non-technical expertise.
+
+I will distribute a brief survey early in the semester
+that will help me gauge your technical background.
+The survey also asks you to indicate who you would (and would not) like
+to have on your team.
+Although a good balance of skills will override your personal preferences,
+I do my best to honor your request.
+
+\subsection{Development Process}
+
+Teams will employ a development process
+based on the standard agile process known as \emph{Scrum}.
+We will employ an iterative approach to project development
+in which your team will focus on delivering
+small increments of functionality
+that provide both you and me a clear and demonstrable indication of your progress.
+
+As in ISA, \textbf{procrastination is the enemy}.
+Using an agile, iterative process forces you and your team
+regularly to deliver working software,
+which not only gives you a clear view of your accomplishments,
+but helps stem the tide of procrastination.
+
+When the project is under way,
+we will hold a weekly \emph{Critical Design Review} (CDR).
+The CDR gives you a chance to present your progress to the class
+and to practice in various roles on a software development team.
+
+\subsection{Show-and-Tell}
+
+At the end of the semester,
+we will have a ``show and tell'' time,
+during which you will demonstrate your prototype application.
+Our customer will be invited to join us for your demonstrations,
+either in person or electronically.
+
+Although this presentation is not \emph{nearly} as formal
+as your final presentation in ISA,
+it is nonetheless your opportunity
+to show off the fruit of a year of your labor.
+Begin the semester with this end in mind,
+and stay focused on delivering an excellent and exciting final product!
+
+\subsection{Technology}
+
+For lab assignments and the project,
+we will be using the following technologies (among others).
+\begin{itemize}
+\item Standard tools and libraries in the Python ecosystem,
+  allowing you to leverage your experience
+  from COS~120 and any other exposure you've had to Python.
+\item The \href{http://flask.pocoo.org/}{Flask}
+  framework for web development in Python.
+\item The \href{https://git-scm.com/}{Git}
+  distributed revision control system.
+  We will use Git
+  for several purposes, including to:
+  \begin{itemize}
+  \item Distribute and collect lab assignments
+  \item Coordinate work among your team members
+  \item Provide insight into your work for grading and guidance
+  \end{itemize}
+\item \href{https://github.com/}{Github},
+  a common location for sharing Git resources
+\item The (optional, but highly recommended)
+  \href{https://www.jetbrains.com/pycharm/}{PyCharm}
+  integrated development environment (IDE).
+\end{itemize}
+
+\section{Evaluation}
+
+The grading breakdown for the course
+is shown in table~\ref{tab:grading}.
+Refer to my \emph{Periodic Table of the Grades} (on Moodle)
+for the grading scheme.
+I reserve the right to award a higher grade than strictly earned;
+outstanding attendance and class participation
+figure prominently in such decisions.
+
+\begin{table}[htb]
+  \centering
+  \begin{tabular}{llrr}
+    \toprule
+    Category &                    &       & Weight \\
+    \midrule
+    Labs     &                    &       & 40\%   \\
+    Project  &                    &       & 60\%   \\
+             & Github Activity    & 40\%  &        \\
+             & Total Hours        & 40\%  &        \\
+             & CDRs               & 10\%  &        \\
+             & Final Presentation & 10\%  &        \\
+             &                    & 100\% &        \\
+    \midrule
+    Total    &                    &       & 100\%  \\
+    \bottomrule
+  \end{tabular}
+  \caption{Grading details}
+  \label{tab:grading}
+\end{table}
+
+\section{Course Expectations}
+
+\input{expectations}
+
+\printbibliography{}
+
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
+
+%  LocalWords:  SYS ISA SQL SRS llrr CDRs CDR PyCharm IDE
