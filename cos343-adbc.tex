@@ -1,0 +1,103 @@
+\documentclass[11pt]{article}
+
+\input{commands}
+\syllabuslayout{COS~343}{Advanced Database Concepts}{Fall}
+
+\usepackage[colorlinks=true,allcolors=blue]{hyperref}
+\usepackage{booktabs}
+\usepackage{comment}
+
+\usepackage{biblatex}
+\addbibresource{courses.bib}
+
+\begin{document}
+
+\titleblock{COS 343}{Advanced Database Concepts}
+
+\section{Instructor}
+
+\input{tom-details}
+
+\section{Texts}
+
+There are two \emph{required} texts for the course
+covering relational database theory and practice~\cite{harrington}
+and multiple types of database management systems~\cite{7db7weeks}.
+Refer to page~\pageref{sec:references}
+for details.
+
+\section{Learning Objectives}
+
+Upon successful completion of this course,
+you will be able to:
+\begin{enumerate}
+\item 
+\end{enumerate}
+
+\section{Course Outline}
+
+We will cover the following topics.
+\begin{enumerate}
+\item Introduction
+\end{enumerate}
+
+\section{Evaluation}
+
+The grading breakdown for the course
+is shown in table~\ref{tab:grading}.
+Refer to my \emph{Periodic Table of the Grades} (on Moodle)
+for the grading scheme.
+I reserve the right to award a higher grade than strictly earned;
+outstanding attendance and class participation
+figure prominently in such decisions.
+
+\begin{table}[htb]
+  \centering
+  % BEGIN RECEIVE ORGTBL grades
+\begin{tabular}{lll}
+\toprule
+Category &  & Weight\\
+\midrule
+Homework & Written & 15\%\\
+ & Programming & 30\%\\
+Exams & Midterm 1 & 15\%\\
+ & Midterm 2 & 15\%\\
+ & Final & 25\%\\
+\midrule
+ & Total & 100\%\\
+\bottomrule
+\end{tabular}
+  % END RECEIVE ORGTBL grades
+  \caption{Grading details}
+  \label{tab:grading}
+\end{table}
+\begin{comment}
+  #+ORGTBL: SEND grades orgtbl-to-latex :splice nil :skip 0 :booktabs t
+  | Category |             | Weight |
+  |----------+-------------+--------|
+  | Homework | Written     |    15% |
+  |          | Programming |    30% |
+  | Exams    | Midterm 1   |    15% |
+  |          | Midterm 2   |    15% |
+  |          | Final       |    25% |
+  |----------+-------------+--------|
+  |          | Total       |   100% |
+  #+TBLFM: @7$3=100*vsum(@I..II);%d%%
+\end{comment}
+
+\section{Course Expectations}
+
+\input{expectations}
+
+\section{Academic Integrity}
+
+\input{cheating}
+
+\printbibliography{}\label{sec:references}
+
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
