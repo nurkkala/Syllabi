@@ -1,4 +1,5 @@
 \usepackage{framed}
+\usepackage{xcolor}
 
 \newcommand{\syllabuslayout}[3]{
   \usepackage[margin=1.5in]{geometry}
@@ -15,4 +16,15 @@
   \lfoot{#1}
   \cfoot{#2}
   \rfoot{#3~\the\year}
+}
+
+\newcommand{\titleblock}[2]{
+  \begin{center}
+    \color{purple}
+    {\bfseries
+    {\Large #1}\\[4pt]
+    {\Large #2}}\\[12pt]
+    Department of Computer Science and Engineering\\
+    Taylor University
+  \end{center}
 }

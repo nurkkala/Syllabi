@@ -170,6 +170,7 @@ figure prominently in such decisions.
 
 \begin{table}[htb]
   \centering
+  % BEGIN RECEIVE ORGTBL grades
   \begin{tabular}{llrr}
     \toprule
     Category &                    &       & Weight \\
@@ -185,9 +186,25 @@ figure prominently in such decisions.
     Total    &                    &       & 100\%  \\
     \bottomrule
   \end{tabular}
+  % END RECEIVE ORGTBL grades
   \caption{Grading details}
   \label{tab:grading}
 \end{table}
+\begin{comment}
+#+ORGTBL: SEND grades orgtbl-to-latex :splice nil :skip 0 :booktabs t
+| Category |                    |      | Weight |
+|          |                    |  <r> |    <r> |
+|----------+--------------------+------+--------|
+| Labs     |                    |      |    40% |
+| Project  |                    |      |    60% |
+|          | Github Activity    |  40% |        |
+|          | Total Hours        |  40% |        |
+|          | CDRs               |  10% |        |
+|          | Final Presentation |  10% |        |
+|          |                    | 100% |        |
+|----------+--------------------+------+--------|
+| Total    |                    |      |   100% |
+\end{comment}
 
 \section{Course Expectations}
 

@@ -12,18 +12,47 @@
 
 \begin{document}
 
+\titleblock{COS 243}{Multi-tier Web Application Development}
+
 \section{Instructor}
 
 \input{tom-details}
 
 \section{Texts}
 
-There are \emph{two required texts} for the course
+There are two \emph{required} texts for the course
 covering Hapi~\cite{hapijs} and Angular~2~\cite{angular2}.
 Refer to page~\pageref{sec:references}
 for details.
 
 \section{Learning Objectives}
+
+Upon successful completion of this course,
+you will be able to:
+\begin{enumerate}
+\item Leverage modern web application architecture
+\item Store application data in a relational database management system
+\item Create entity-relationship diagrams of a data model
+\item Use the Git distributed revision control system
+  and the \href{https://github.com/}{GitHub} hosting service for Git
+\item Employ the massive ecosystem of server-side JavaScript
+\item Design and program using asynchronous JavaScript,
+  including callbacks and promises
+\item Know how to use a database-independent query builder
+  to create queries that work across database platforms
+\item Understand object-relational mapping
+  and apply it in a JavaScript-based web server
+\item Leverage the full capability of the HTTP protocol
+\item Design and document flexible and powerful RESTful web services
+\item Construct a RESTful web server
+\item Create tests that validate the behavior of a RESTful server
+\item Validate RESTful requests received by a server
+\item Use the TypeScript language, an extension of JavaScript
+\item Design and build a user interface using a standards-compliant toolkit 
+\item Employ Angular~2 to create a non-trivial single-page web application
+\item Tame client-side asynchronous behavior using observables
+\item Implement regression tests for client-side code
+\end{enumerate}
 
 \section{Course Outline}
 
@@ -79,6 +108,10 @@ We will cover the following topics.
 
 \section{Project}
 
+During the course,
+you will build a modern, full-stack web application
+using all the technologies we will cover.
+
 \section{Evaluation}
 
 The grading breakdown for the course
@@ -92,19 +125,18 @@ figure prominently in such decisions.
 \begin{table}[htb]
   \centering
   % BEGIN RECEIVE ORGTBL grades
-  \begin{tabular}{llrr}
+  \begin{tabular}{llr}
     \toprule
-    Category &                    &       & Weight \\
+    Category &             & Weight \\
     \midrule
-    Labs     &                    &       & 40\%   \\
-    Project  &                    &       & 60\%   \\
-             & Github Activity    & 40\%  &        \\
-             & Total Hours        & 40\%  &        \\
-             & CDRs               & 10\%  &        \\
-             & Final Presentation & 10\%  &        \\
-             &                    & 100\% &        \\
+    Homework & Written     & 10\%   \\
+             & Programming & 25\%   \\
+    Project  &             & 25\%   \\
+    Exams    & Midterm 1   & 10\%   \\
+             & Midterm 2   & 10\%   \\
+             & Final       & 20\%   \\
     \midrule
-    Total    &                    &       & 100\%  \\
+             & Total       & 100\%  \\
     \bottomrule
   \end{tabular}
   % END RECEIVE ORGTBL grades
@@ -113,20 +145,21 @@ figure prominently in such decisions.
 \end{table}
 \begin{comment}
 #+ORGTBL: SEND grades orgtbl-to-latex :splice nil :skip 0 :booktabs t
-| Category |                    |      | Weight |
-|          |                    |  <r> |    <r> |
-|----------+--------------------+------+--------|
-| Labs     |                    |      |    40% |
-| Project  |                    |      |    60% |
-|          | Github Activity    |  40% |        |
-|          | Total Hours        |  40% |        |
-|          | CDRs               |  10% |        |
-|          | Final Presentation |  10% |        |
-|          |                    | 100% |        |
-|----------+--------------------+------+--------|
-| Total    |                    |      |   100% |
+| Category |             | Weight |
+|          |             |    <r> |
+|----------+-------------+--------|
+| Homework | Written     |    10% |
+|          | Programming |    25% |
+| Project  |             |    25% |
+| Exams    | Midterm 1   |    10% |
+|          | Midterm 2   |    10% |
+|          | Final       |    20% |
+|----------+-------------+--------|
+|          | Total       |   100% |
+#+TBLFM: @9$3=100*vsum(@I..II);%d%%
 \end{comment}
 
+\newpage
 \section{Course Expectations}
 
 \input{expectations}
@@ -144,4 +177,5 @@ figure prominently in such decisions.
 %%% TeX-master: t
 %%% End:
 
-% LocalWords:  SYS ISA SQL SRS llrr CDRs CDR PyCharm IDE Hapi UI
+% LocalWords:  SYS ISA SQL SRS llrr CDRs CDR PyCharm IDE Hapi UI lr ORGTBL
+%  LocalWords:  orgtbl booktabs TBLFM vsum
