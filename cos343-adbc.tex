@@ -31,15 +31,40 @@ for details.
 Upon successful completion of this course,
 you will be able to:
 \begin{enumerate}
-\item 
+\item Articulate key differences among various modern database architectures,
+  including relational, key-value, and document databases
+\item Design and document database designs using entity-relationship modeling
+\item Employ multiple notations for database modeling
+\item Understand relational algebra,
+  the theoretical underpinning of relational databases
+\item Normalize databases to ensure data integrity and maintainability
+  while ensuring high performance
+\item Index relational data for improved query performance
+\item Express simple relational queries using Structured Query Language (SQL)
+\item Write complex SQL queries
+  that join multiple tables
+  using complex logical and functional operators
+\item Write queries that aggregate data from multiple rows of a data model
+\item Perform insert, update, and delete operations using SQL
+\item Use transactions to maintain data integrity
+\item Understand concurrency control and locking
+\item Employ a relational database using object-relation mapping tools
+\item Known how to choose whether to use a relational or post-relational
+  database for specific applications
+\item Use a key-value database
+\item Articulate the key concepts of document databases,
+  including the object model, sharding, and replication
+\item Write queries and other operations for document databases
+\item Use several modern document databases for practical applications
+  including data persistence for web services
 \end{enumerate}
 
-\section{Course Outline}
+% \section{Course Outline}
 
-We will cover the following topics.
-\begin{enumerate}
-\item Introduction
-\end{enumerate}
+% We will cover the following topics.
+% \begin{enumerate}
+% \item Introduction
+% \end{enumerate}
 
 \section{Evaluation}
 
@@ -54,34 +79,34 @@ figure prominently in such decisions.
 \begin{table}[htb]
   \centering
   % BEGIN RECEIVE ORGTBL grades
-\begin{tabular}{lll}
-\toprule
-Category &  & Weight\\
-\midrule
-Homework & Written & 15\%\\
- & Programming & 30\%\\
-Exams & Midterm 1 & 15\%\\
- & Midterm 2 & 15\%\\
- & Final & 25\%\\
-\midrule
- & Total & 100\%\\
-\bottomrule
-\end{tabular}
+  \begin{tabular}{lll}
+    \toprule
+    Category    &             & Weight \\
+    \midrule
+    Assignments & Written     & 20\%   \\
+                & Programming & 40\%   \\
+    Exams       & Midterm 1   & 10\%   \\
+                & Midterm 2   & 10\%   \\
+                & Final       & 20\%   \\
+    \midrule
+                & Total       & 100\%  \\
+    \bottomrule
+  \end{tabular}
   % END RECEIVE ORGTBL grades
   \caption{Grading details}
   \label{tab:grading}
 \end{table}
 \begin{comment}
   #+ORGTBL: SEND grades orgtbl-to-latex :splice nil :skip 0 :booktabs t
-  | Category |             | Weight |
-  |----------+-------------+--------|
-  | Homework | Written     |    15% |
-  |          | Programming |    30% |
-  | Exams    | Midterm 1   |    15% |
-  |          | Midterm 2   |    15% |
-  |          | Final       |    25% |
-  |----------+-------------+--------|
-  |          | Total       |   100% |
+  | Category    |             | Weight |
+  |-------------+-------------+--------|
+  | Assignments | Written     |    20% |
+  |             | Programming |    40% |
+  | Exams       | Midterm 1   |    10% |
+  |             | Midterm 2   |    10% |
+  |             | Final       |    20% |
+  |-------------+-------------+--------|
+  |             | Total       |   100% |
   #+TBLFM: @7$3=100*vsum(@I..II);%d%%
 \end{comment}
 
