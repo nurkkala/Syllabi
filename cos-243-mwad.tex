@@ -7,8 +7,8 @@
 \usepackage{booktabs}
 \usepackage{comment}
 
-\usepackage{biblatex}
-\addbibresource{courses.bib}
+% \usepackage{biblatex}
+% \addbibresource{courses.bib}
 
 \begin{document}
 
@@ -18,12 +18,9 @@
 
 \input{tom-details}
 
-\section{Texts}
+\section{Text}
 
-There are two \emph{required} texts for the course
-covering Hapi~\cite{hapijs} and Angular~2~\cite{angular2}.
-Refer to page~\pageref{sec:references}
-for details.
+\input{safari}
 
 \section{Learning Objectives}
 
@@ -47,11 +44,8 @@ you will be able to:
 \item Construct a RESTful web server
 \item Create tests that validate the behavior of a RESTful server
 \item Validate RESTful requests received by a server
-\item Use the TypeScript language, an extension of JavaScript
 \item Design and build a user interface using a standards-compliant toolkit 
-\item Employ Angular~2 to create a non-trivial single-page web application
-\item Tame client-side asynchronous behavior using observables
-\item Implement regression tests for client-side code
+\item Implement unit and regression tests for sever- and client-side code
 \end{enumerate}
 
 \section{Course Outline}
@@ -86,7 +80,7 @@ We will cover the following topics.
     \item Endpoints
     \item Testing
     \end{enumerate}
-  \item Hapi REST Server
+  \item RESTful API Server
     \begin{enumerate}
     \item Concepts
     \item Server
@@ -96,11 +90,8 @@ We will cover the following topics.
   \end{enumerate}
 \item Single-Page Applications
   \begin{enumerate}
-  \item TypeScript
-  \item Angular~2
   \item UI Toolkits
   \item Development Tools
-  \item RxJS
   \item Authentication
   \item Testing
   \end{enumerate}
@@ -125,37 +116,37 @@ figure prominently in such decisions.
 \begin{table}[htb]
   \centering
   % BEGIN RECEIVE ORGTBL grades
-  \begin{tabular}{llr}
-    \toprule
-    Category &             & Weight \\
-    \midrule
-    Homework & Written     & 10\%   \\
-             & Programming & 25\%   \\
-    Project  &             & 25\%   \\
-    Exams    & Midterm 1   & 10\%   \\
-             & Midterm 2   & 10\%   \\
-             & Final       & 20\%   \\
-    \midrule
-             & Total       & 100\%  \\
-    \bottomrule
-  \end{tabular}
+\begin{tabular}{llr}
+\toprule
+Category &                 & Weight \\
+\midrule
+Homework & Reading Quizzes & 10\%   \\
+         & Programming     & 25\%   \\
+Project  &                 & 25\%   \\
+Exams    & Midterm 1       & 10\%   \\
+         & Midterm 2       & 10\%   \\
+         & Final           & 20\%   \\
+\midrule
+         & Total           & 100\%  \\
+\bottomrule
+\end{tabular}
   % END RECEIVE ORGTBL grades
   \caption{Grading details}
   \label{tab:grading}
 \end{table}
 \begin{comment}
 #+ORGTBL: SEND grades orgtbl-to-latex :splice nil :skip 0 :booktabs t
-| Category |             | Weight |
-|          |             |    <r> |
-|----------+-------------+--------|
-| Homework | Written     |    10% |
-|          | Programming |    25% |
-| Project  |             |    25% |
-| Exams    | Midterm 1   |    10% |
-|          | Midterm 2   |    10% |
-|          | Final       |    20% |
-|----------+-------------+--------|
-|          | Total       |   100% |
+| Category |                 | Weight |
+|          |                 |    <r> |
+|----------+-----------------+--------|
+| Homework | Reading Quizzes |    10% |
+|          | Programming     |    25% |
+| Project  |                 |    25% |
+| Exams    | Midterm 1       |    10% |
+|          | Midterm 2       |    10% |
+|          | Final           |    20% |
+|----------+-----------------+--------|
+|          | Total           |   100% |
 #+TBLFM: @9$3=100*vsum(@I..II);%d%%
 \end{comment}
 
@@ -168,7 +159,7 @@ figure prominently in such decisions.
 
 \input{cheating}
 
-\printbibliography{}\label{sec:references}
+% \printbibliography{}\label{sec:references}
 
 \end{document}
 
@@ -177,5 +168,4 @@ figure prominently in such decisions.
 %%% TeX-master: t
 %%% End:
 
-% LocalWords:  SYS ISA SQL SRS llrr CDRs CDR PyCharm IDE Hapi UI lr ORGTBL
-%  LocalWords:  orgtbl booktabs TBLFM vsum
+% LocalWords:  llr

@@ -7,8 +7,8 @@
 \usepackage{booktabs}
 \usepackage{comment}
 
-\usepackage{biblatex}
-\addbibresource{courses.bib}
+% \usepackage{biblatex}
+% \addbibresource{courses.bib}
 
 \begin{document}
 
@@ -20,11 +20,7 @@
 
 \section{Texts}
 
-There are two \emph{required} texts for the course
-covering relational database theory and practice~\cite{harrington}
-and multiple types of database management systems~\cite{7db7weeks}.
-Refer to page~\pageref{sec:references}
-for details.
+\input{safari}
 
 \section{Learning Objectives}
 
@@ -79,34 +75,34 @@ figure prominently in such decisions.
 \begin{table}[htb]
   \centering
   % BEGIN RECEIVE ORGTBL grades
-  \begin{tabular}{lll}
-    \toprule
-    Category    &             & Weight \\
-    \midrule
-    Assignments & Written     & 20\%   \\
-                & Programming & 40\%   \\
-    Exams       & Midterm 1   & 10\%   \\
-                & Midterm 2   & 10\%   \\
-                & Final       & 20\%   \\
-    \midrule
-                & Total       & 100\%  \\
-    \bottomrule
-  \end{tabular}
+\begin{tabular}{lll}
+\toprule
+Category    &                 & Weight \\
+\midrule
+Assignments & Reading Quizzes & 20\%   \\
+            & Programming     & 40\%   \\
+Exams       & Midterm 1       & 10\%   \\
+            & Midterm 2       & 10\%   \\
+            & Final           & 20\%   \\
+\midrule
+            & Total           & 100\%  \\
+\bottomrule
+\end{tabular}
   % END RECEIVE ORGTBL grades
   \caption{Grading details}
   \label{tab:grading}
 \end{table}
 \begin{comment}
   #+ORGTBL: SEND grades orgtbl-to-latex :splice nil :skip 0 :booktabs t
-  | Category    |             | Weight |
-  |-------------+-------------+--------|
-  | Assignments | Written     |    20% |
-  |             | Programming |    40% |
-  | Exams       | Midterm 1   |    10% |
-  |             | Midterm 2   |    10% |
-  |             | Final       |    20% |
-  |-------------+-------------+--------|
-  |             | Total       |   100% |
+  | Category    |                 | Weight |
+  |-------------+-----------------+--------|
+  | Assignments | Reading Quizzes |    20% |
+  |             | Programming     |    40% |
+  | Exams       | Midterm 1       |    10% |
+  |             | Midterm 2       |    10% |
+  |             | Final           |    20% |
+  |-------------+-----------------+--------|
+  |             | Total           |   100% |
   #+TBLFM: @7$3=100*vsum(@I..II);%d%%
 \end{comment}
 
@@ -118,7 +114,7 @@ figure prominently in such decisions.
 
 \input{cheating}
 
-\printbibliography{}\label{sec:references}
+% \printbibliography{}\label{sec:references}
 
 \end{document}
 
@@ -126,3 +122,5 @@ figure prominently in such decisions.
 %%% mode: latex
 %%% TeX-master: t
 %%% End:
+
+% LocalWords:  sharding lll ORGTBL orgtbl booktabs TBLFM vsum

@@ -1,7 +1,7 @@
 \documentclass[11pt]{article}
 
 \input{commands}
-\syllabuslayout{COS~436}{Parallel and Distributed Computing}{Spring}
+\syllabuslayout{COS~436}{Parallel and Distributed Computing}{Fall}
 
 \usepackage[colorlinks=true,allcolors=blue]{hyperref}
 \usepackage{booktabs}
@@ -53,8 +53,6 @@ that maximizes the performance of modern computer systems.
 
 Upon successful completion of this course, you should be able to:
 
-
-
 \begin{enumerate}
 \item Explain the history of high-performance computing
   and place modern parallel and distributed computing
@@ -84,25 +82,7 @@ Upon successful completion of this course, you should be able to:
 
 \section{Texts}
 
-There is one \textbf{required} text:
-\begin{itemize}
-\item Barlas~\cite{barlas2014multicore}
-\end{itemize}
-You may also wish to acquire access to the following \textbf{recommended} texts:
-\begin{itemize}
-\item Cheng, et.\ al.~\cite{cheng2014professional}
-\item Wilt~\cite{wilt2013cuda}
-\item Storti and Yurtoglu~\cite{storti2015cuda}
-\end{itemize}
-You can order the textbook online,
-but you may also wish to consider joining Safari Books Online~\cite{safari}.
-Over the course of the semester,
-Safari will cost about the same as the price of Barlas,
-but will give you access to the other resources mentioned above
-\emph{and} a ton of other great technical books, videos, and other resources.
-I have been a member of Safari for many years,
-and I find it to be an invaluable technical resource.\footnote{I receive no compensation
-  from Safari for this endorsement.}
+\input{safari}
 
 \section{Evaluation}
 
@@ -116,39 +96,45 @@ participation figure prominently in such decisions.
 \begin{table}[htb]
   \centering
   % BEGIN RECEIVE ORGTBL grades
-  \begin{tabular}{lr}
-    \toprule
-    Category & Weight \\
-    \midrule
-    Homework & 35\%   \\
-    Exam 1   & 20\%   \\
-    Exam 2   & 20\%   \\
-    Final    & 25\%   \\
-    \midrule
-    Total    & 100\%  \\
-    \bottomrule
-  \end{tabular}
+\begin{tabular}{lll}
+\toprule
+Category    &                 & Weight \\
+\midrule
+Assignments & Reading Quizzes & 20\%   \\
+            & Programming     & 40\%   \\
+Exams       & Midterm 1       & 10\%   \\
+            & Midterm 2       & 10\%   \\
+            & Final           & 20\%   \\
+\midrule
+            & Total           & 100\%  \\
+\bottomrule
+\end{tabular}
   % END RECEIVE ORGTBL grades
   \caption{Grading details}
   \label{tab:grading}
 \end{table}
 
 \begin{comment}
-  #+ORGTBL: SEND grades orgtbl-to-latex :booktabs t
-  | Category | Weight |
-  |----------+--------|
-  | <l>      |    <r> |
-  | Homework |    35% |
-  | Exam 1   |    20% |
-  | Exam 2   |    20% |
-  | Final    |    25% |
-  |----------+--------|
-  | Total    |   100% |
+  #+ORGTBL: SEND grades orgtbl-to-latex :splice nil :skip 0 :booktabs t
+  | Category    |                 | Weight |
+  |-------------+-----------------+--------|
+  | Assignments | Reading Quizzes |    20% |
+  |             | Programming     |    40% |
+  | Exams       | Midterm 1       |    10% |
+  |             | Midterm 2       |    10% |
+  |             | Final           |    20% |
+  |-------------+-----------------+--------|
+  |             | Total           |   100% |
+  #+TBLFM: @7$3=100*vsum(@I..II);%d%%
 \end{comment}
 
 \section{Course Expectations}
 
 \input{expectations}
+
+\section{Academic Integrity}
+
+\input{cheating}
 
 \printbibliography{}
 
