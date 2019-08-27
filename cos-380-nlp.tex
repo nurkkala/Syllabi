@@ -1,0 +1,160 @@
+\documentclass[11pt]{article}
+
+\input{commands}
+\syllabuslayout{COS~380}{Natural Language Processing}{Fall}
+
+\usepackage[colorlinks=true,allcolors=blue]{hyperref}
+\usepackage{booktabs}
+\usepackage{comment}
+
+% \usepackage{biblatex}
+% \addbibresource{courses.bib}
+
+\begin{document}
+
+\titleblock{COS 380}{Natural Language Processing}
+
+\logistics{Three}{Euler Science 103}{MWF 1:00--1:50}{M/09-Dec-2019, 8:00--10:00}
+
+\section{Instructor}
+
+\input{tom-details}
+
+\begin{catalogentry}{COS~280}
+  A study of the automation of human communication abilities,
+  covering both textual and vocal aspects.
+  Major topics include language parsing, understanding, representation,
+  enhancement, generation, translation,
+  and speaker/author recognition.
+\end{catalogentry}
+
+\section{Learning Objectives}
+
+Upon successful completion of this course,
+you will be able to:
+\begin{enumerate}
+\item Articulate the history, development, and topics
+  commonly studied in Natural Language Processing (NLP)
+\item Use and apply algorithms for text processing
+\item Continue investigation into NLP
+\item Demonstrate critical inquiry in NLP and computational linguistics
+\item Use NLP for practical, hands-on purposes
+\item Create software at a high level of sophistication
+  using languages relevant to text processing.
+\item Have an awareness of how Christians should apply the capabilities
+  of Artificial Intelligence, especially those in NLP.
+\end{enumerate}
+
+\section{Possible Topics}
+NLP is a very large field. We will cover some (but not all) of the following topics.
+\begin{enumerate}
+\item Regular expressions
+\item Finite state automata
+\item Finite state transducers
+\item N-Grams
+\item Part-of-speech tagging
+\item Hidden Markov Models
+\item Formal Grammars of English
+\item Syntactic Parsing
+\item Statistical Parsing
+\item Features and Unification
+\item Representation of Meaning
+\item Computational Semantics
+\item Lexical Semantics
+\item Computational Lexical Semantics
+\item Computational Discourse
+\item Information Extraction
+\item Question Answering and Summarization
+\item Machine Translation
+\end{enumerate}
+
+\section{Project}
+
+During the course,
+you will build a non-trivial application
+that demonstrates your understanding of Natural Language Processing.
+
+\section{Text}
+
+\input{safari}
+
+\section{Evaluation}
+
+The grading breakdown for the course
+is shown in Table~\ref{tab:grading}.
+Refer to my \emph{Periodic Table of the Grades}
+for the grading scheme.
+I reserve the right to award a higher grade than strictly earned;
+outstanding attendance and class participation
+figure prominently in such decisions.
+
+\begin{table}[htb]
+  \centering
+  % BEGIN RECEIVE ORGTBL grades
+  \begin{tabular}{lr}
+    \toprule
+    & Weight \\
+    \midrule
+    Homework      & 10\%   \\
+    Programming   & 20\%   \\
+    Participation & 10\%   \\
+    Project       & 20\%   \\
+    Midterm       & 20\%   \\
+    Final         & 20\%   \\
+    \midrule
+    Total         & 100\%  \\
+    \bottomrule
+  \end{tabular}
+  % END RECEIVE ORGTBL grades
+  \caption{Grading details}
+  \label{tab:grading}
+\end{table}
+\begin{comment}
+#+ORGTBL: SEND grades orgtbl-to-latex :splice nil :skip 0 :booktabs t
+|               | Weight |
+|               |    <r> |
+|---------------+--------|
+| Homework      |    10% |
+| Programming   |    20% |
+| Participation |    10% |
+| Project       |    20% |
+| Midterm       |    20% |
+| Final         |    20% |
+|---------------+--------|
+| Total         |   100% |
+#+TBLFM: @11$2=100*vsum(@I..II);%d%%
+\end{comment}
+
+\section{Course Expectations}
+
+\input{expectations}
+
+\section{Course Management}
+
+We use several systems to help manage the course
+and for on-line communication.
+
+\input{email}
+\input{canvas}
+\input{slack}
+
+\section{Academic Integrity}
+
+\input{cheating}
+
+\section{Support Services}
+
+\input{support-services}
+
+\lastupdated
+
+% \printbibliography{}\label{sec:references}
+
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
+
+% LocalWords:  automata Summarization lr

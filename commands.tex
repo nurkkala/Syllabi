@@ -22,9 +22,32 @@
   \begin{center}
     \color{purple}
     {\bfseries
-    {\Large #1}\\[4pt]
-    {\Large #2}}\\[12pt]
+      {\Large #1}\\[4pt]
+      {\Large #2}}\\[12pt]
     Department of Computer Science and Engineering\\
     Taylor University
   \end{center}
 }
+
+\newcommand{\logistics}[4]{
+  \begin{center}
+    #1 Credit Hours\\
+    #2 $\bullet$\ #3\\[1em]
+    Final Exam: #4
+  \end{center}
+}
+
+\newcommand{\lastupdated}{
+\vfill
+\begin{flushright}
+  \footnotesize
+  \textit{This document last updated \today}.
+\end{flushright}}
+
+\newenvironment{catalogentry}[1]
+{\section{Description}
+  \textbf{Prerequisites}: #1\\
+
+  \noindent
+  \textbf{From the catalog}:}
+{}
