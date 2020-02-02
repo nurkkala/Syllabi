@@ -1,0 +1,195 @@
+\documentclass[11pt]{article}
+
+\input{commands}
+\syllabuslayout{COS~326}{Data Visualization}{Fall}
+
+\usepackage[colorlinks=true,allcolors=blue]{hyperref}
+\usepackage{booktabs}
+\usepackage{comment}
+
+\usepackage{biblatex}
+\addbibresource{courses.bib}
+
+\begin{document}
+
+\titleblock{COS 326}{Data Visualization}
+
+\logistics{Three}{Euler Science 201}{MWF 2:00--2:50}{W/20-May-2020, 8:00--10:00}
+
+\section{Instructor}
+
+\input{tom-details}
+
+\begin{catalogentry}{COS~120, COS~143; \textbf{encouraged}: MAT~311, Statistics course}
+  This course introduces explanatory and exploratory data visualization,
+  including principles, techniques, and tools,
+  that facilitate understanding and action based on very big data sets.
+  Principles from graphic design,
+  visual perception,
+  and cognitive science are considered.
+  Students employ modern tools and languages to access, analyze, and visualize
+  Internet-scale data.
+\end{catalogentry}
+
+\section{Learning Objectives}
+
+Upon successful completion of this course,
+you will be able to:
+\begin{enumerate}
+\item Articulate and employ standards of excellence in
+  the presentation of visual information.
+\item Understand key aspects of human perception of visual information.
+\item Employ conventional tools for visualization (e.g., office software suites)
+  to communicate data clearly and consistently.
+\item Identify, extract, and clean Internet-scale data sets in preparation
+  for visualization.
+\item Use purpose built tools to analyze and visualize large, complex
+  data sets (e.g.,
+  \href{https://observablehq.com/}{Observable},
+  \href{https://jupyter.org/}{Jupyter},
+  \href{https://matplotlib.org/}{matplotlib},
+  \href{https://ggplot2.tidyverse.org/}{ggplot2},
+  \href{https://rstudio.com/products/rstudio/}{R~Studio}).
+\item Write robust software in languages relevant to
+  data science and data visualization (e.g.,
+  \href{https://www.python.org/}{Python},
+  \href{https://www.r-project.org/}{R},
+  \href{https://developer.mozilla.org/en-US/docs/Web/JavaScript}{JavaScript},
+  \href{https://www.typescriptlang.org/}{TypeScript})
+\item Develop custom, interactive, Web-based visualizations
+  that allow rich exploration of complex data using
+  standard tools (e.g., \href{https://d3js.org/}{D3}).
+\item Critique the clarity and efficacy of visualizations from other data scientists.
+\item Work as a team to create visualizations of complex and socially relevant data.
+\end{enumerate}
+
+\section{Team Project}
+
+During the course,
+you and a partner
+will create non-trivial visualizations
+of real world data that:
+\begin{enumerate}
+\item Exercises your understanding of data visualization.
+\item Showcases your ability and experience with data visualization techniques and tools
+\item Clarifies the facts of a complex or controversial topic of relevance to
+  contemporary society.
+\end{enumerate}
+
+\section{Texts}
+
+Our principle text will be Wilke~\cite{wilke2019fundamentals}.
+
+For programming exercises,
+I recommend Murray~\cite{murray2017interactive} and
+Janert~\cite{janert2019d3} for D3,
+VanderPlas~\cite{vanderplas2016python} for Python,
+and Wickham~\cite{wickham2016r} for R.
+
+Other volumes of utility for D3 are 
+Meeks~\cite{meeks2017d3}
+(a title from the normally terrific Manning, this one is comprehensive but uninspiring visually)
+and Heydt~\cite{heydt2015d3}
+(a surprisingly clear text published by the very uneven Packt).
+Our custom visualizations will use Scalable Vector Graphics (SVG);
+Bellamy~\cite{bellamy2014svg} is a good overview.
+
+Finally,
+Edward Tufte is the leading expert on data visualization in the last 50~years.
+His book
+\emph{The Visual Display of Quantitative Information}~\cite{tufte1983visual}
+is the modern classic in the field.
+His other major publications
+(\cite{tufte1990envisioning},
+\cite{tufte1997visual}, and
+\cite{tufte2006beautiful})
+also warrant close inspection for instruction and inspiration.
+His thin \emph{Cognitive Style of PowerPoint}~\cite{tufte2006cognitive}
+is a fantastic critique of modern ``slide ware,''
+\href{https://www.nytimes.com/2003/12/14/magazine/2003-the-3rd-annual-year-in-ideas-powerpoint-makes-you-dumb.html}{how it makes you dumb},
+and how it helped bring down the Space Shuttle \emph{Challenger}.
+
+\subsection{Safari}
+\input{safari}
+
+\section{Evaluation}
+
+The grading breakdown for the course
+is shown in Table~\ref{tab:grading}.
+Refer to my \emph{Periodic Table of the Grades}
+for the grading scheme.
+I reserve the right to award a higher grade than strictly earned;
+outstanding attendance and class participation
+figure prominently in such decisions.
+
+\begin{table}[htb]
+  \centering
+  % BEGIN RECEIVE ORGTBL grades
+  \begin{tabular}{lr}
+    \toprule
+    & Weight \\
+    \midrule
+    Homework      & 10\%   \\
+    Programming   & 20\%   \\
+    Participation & 10\%   \\
+    Project       & 20\%   \\
+    Midterm       & 20\%   \\
+    Final         & 20\%   \\
+    \midrule
+    Total         & 100\%  \\
+    \bottomrule
+  \end{tabular}
+  % END RECEIVE ORGTBL grades
+  \caption{Grading details}
+  \label{tab:grading}
+\end{table}
+\begin{comment}
+#+ORGTBL: SEND grades orgtbl-to-latex :splice nil :skip 0 :booktabs t
+|               | Weight |
+|               |    <r> |
+|---------------+--------|
+| Homework      |    10% |
+| Programming   |    20% |
+| Participation |    10% |
+| Project       |    20% |
+| Midterm       |    20% |
+| Final         |    20% |
+|---------------+--------|
+| Total         |   100% |
+#+TBLFM: @11$2=100*vsum(@I..II);%d%%
+\end{comment}
+
+\section{Course Expectations}
+
+\input{expectations}
+
+\section{Course Management}
+
+We use several systems to help manage the course
+and for on-line communication.
+
+\input{email}
+\input{canvas}
+\input{slack}
+
+\section{Academic Integrity}
+
+\input{cheating}
+
+\section{Support Services}
+
+\input{support-services}
+
+\printbibliography{}
+
+\lastupdated
+
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
+
+% LocalWords:  MWF ORGTBL orgtbl booktabs TBLFM vsum matplotlib lr ggplot
+% LocalWords:  Wilke Janert VanderPlas Wickham Meeks Heydt Packt

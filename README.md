@@ -1,3 +1,3 @@
 # Syllabi
 
-Taylor CS&amp;E Course Syllabi
+Taylor CS&E Course Syllabi
