@@ -7,14 +7,22 @@
 \usepackage{booktabs}
 \usepackage{comment}
 
-\usepackage{biblatex}
-\addbibresource{courses.bib}
-
 \begin{document}
+
+\titleblock{COS 436}{Parallel \& Distributed Computing}
+
+\logistics{Three}{Euler Science 200}{MWF 2:00-3:00}{T/01-Dec, 1:00-3:00}
 
 \section{Instructor}
 
 \input{tom-details}
+
+\begin{catalogentry}{COS~265}
+  A study of concepts and models of distributed and parallel computing,
+  including concurrency, synchronization, algorithms, hardware organization,
+  and common programming environments.
+  Implementation of parallel algorithms on multi-core CPUs and many-core GPUs.   
+\end{catalogentry}
 
 \section{Course Overview}
 
@@ -31,7 +39,7 @@ For a variety of reasons that we'll discuss,
 the world hasn't run exclusively on one-processor computers
 for a long time.
 Back in~2001, IBM released the first
-two-core microprocessor---the Power4.\cite{ibm-power4}
+two-core microprocessor---the Power4.
 As we'll see,
 since that watershed introduction,
 multi-core, many-core, and massively parallel processors
@@ -80,7 +88,7 @@ Upon successful completion of this course, you should be able to:
   that execute cooperatively on both CPU and GPU cores.
 \end{enumerate}
 
-\section{Texts}
+\section{Text}
 
 \input{safari}
 
@@ -89,26 +97,26 @@ Upon successful completion of this course, you should be able to:
 The grading breakdown
 for the course
 is shown in table~\ref{tab:grading}.
-Refer to my \emph{Periodic Table of the Grades} (on Moodle) for the grading scheme. I reserve
-the right to award a higher grade than strictly earned; outstanding attendance and class
-participation figure prominently in such decisions.
+Refer to my \emph{Periodic Table of the Grades} for the grading scheme.
+I reserve the right to award a higher grade than strictly earned;
+outstanding attendance and class participation
+figure prominently in such decisions.
 
 \begin{table}[htb]
   \centering
   % BEGIN RECEIVE ORGTBL grades
-\begin{tabular}{lll}
-\toprule
-Category    &                 & Weight \\
-\midrule
-Assignments & Reading Quizzes & 20\%   \\
-            & Programming     & 40\%   \\
-Exams       & Midterm 1       & 10\%   \\
-            & Midterm 2       & 10\%   \\
-            & Final           & 20\%   \\
-\midrule
-            & Total           & 100\%  \\
-\bottomrule
-\end{tabular}
+  \begin{tabular}{lll}
+    \toprule
+    Category    &                 & Weight \\
+    \midrule
+    Assignments & Reading Quizzes & 20\%   \\
+                & Programming     & 40\%   \\
+    Exams       & Midterm         & 15\%   \\
+                & Final           & 25\%   \\
+    \midrule
+                & Total           & 100\%  \\
+    \bottomrule
+  \end{tabular}
   % END RECEIVE ORGTBL grades
   \caption{Grading details}
   \label{tab:grading}
@@ -120,9 +128,8 @@ Exams       & Midterm 1       & 10\%   \\
   |-------------+-----------------+--------|
   | Assignments | Reading Quizzes |    20% |
   |             | Programming     |    40% |
-  | Exams       | Midterm 1       |    10% |
-  |             | Midterm 2       |    10% |
-  |             | Final           |    20% |
+  | Exams       | Midterm         |    15% |
+  |             | Final           |    25% |
   |-------------+-----------------+--------|
   |             | Total           |   100% |
   #+TBLFM: @7$3=100*vsum(@I..II);%d%%
@@ -132,11 +139,32 @@ Exams       & Midterm 1       & 10\%   \\
 
 \input{expectations}
 
+\section{Pandemic}
+
+\input{covid}
+
+\section{Course Management}
+
+We use several systems to help manage the course
+and for on-line communication.
+
+\input{email}
+\input{canvas}
+\input{slack}
+
+\section{Final Exam Policy}
+
+\input{final-exams}
+
 \section{Academic Integrity}
 
 \input{cheating}
 
-\printbibliography{}
+\section{Support Services}
+
+\input{support-services}
+
+\lastupdated
 
 \end{document}
 
@@ -145,5 +173,5 @@ Exams       & Midterm 1       & 10\%   \\
 %%% TeX-master: t
 %%% End:
 
-%  LocalWords:  ISD Kepner Tregoe SRS ISA llllll christ multi OpenMP MPI GPUs
-%  LocalWords:  GPU Barlas Cheng et al Storti Yurtoglu
+
+% LocalWords:  MWF lll ORGTBL orgtbl booktabs TBLFM vsum

@@ -7,14 +7,11 @@
 \usepackage{booktabs}
 \usepackage{comment}
 
-% \usepackage{biblatex}
-% \addbibresource{courses.bib}
-
 \begin{document}
 
 \titleblock{COS 343}{Advanced Database Concepts}
 
-\logistics{Three}{Euler Science 103}{MWF 11:00--11:50}{W/11-Dec-2019, 10:00--12:00}
+\logistics{Three}{Euler Science 103}{MWF 11:00--11:50}{Th/03-Dec, 8:00--10:00}
 
 \section{Instructor}
 
@@ -62,7 +59,7 @@ you will be able to:
   including data persistence for web services
 \end{enumerate}
 
-\section{Texts}
+\section{Text}
 
 \input{safari}
 
@@ -79,19 +76,18 @@ figure prominently in such decisions.
 \begin{table}[htb]
   \centering
   % BEGIN RECEIVE ORGTBL grades
-\begin{tabular}{lll}
-\toprule
-Category    &                 & Weight \\
-\midrule
-Assignments & Reading Quizzes & 20\%   \\
-            & Programming     & 40\%   \\
-Exams       & Midterm 1       & 10\%   \\
-            & Midterm 2       & 10\%   \\
-            & Final           & 20\%   \\
-\midrule
-            & Total           & 100\%  \\
-\bottomrule
-\end{tabular}
+  \begin{tabular}{llr}
+    \toprule
+    Category    &                 & Weight \\
+    \midrule
+    Assignments & Reading Quizzes & 20\%   \\
+                & Programming     & 40\%   \\
+    Exams       & Midterm         & 15\%   \\
+                & Final           & 25\%   \\
+    \midrule
+                & Total           & 100\%  \\
+    \bottomrule
+  \end{tabular}
   % END RECEIVE ORGTBL grades
   \caption{Grading details}
   \label{tab:grading}
@@ -99,12 +95,12 @@ Exams       & Midterm 1       & 10\%   \\
 \begin{comment}
   #+ORGTBL: SEND grades orgtbl-to-latex :splice nil :skip 0 :booktabs t
   | Category    |                 | Weight |
+  |             |                 |    <r> |
   |-------------+-----------------+--------|
   | Assignments | Reading Quizzes |    20% |
   |             | Programming     |    40% |
-  | Exams       | Midterm 1       |    10% |
-  |             | Midterm 2       |    10% |
-  |             | Final           |    20% |
+  | Exams       | Midterm         |    15% |
+  |             | Final           |    25% |
   |-------------+-----------------+--------|
   |             | Total           |   100% |
   #+TBLFM: @7$3=100*vsum(@I..II);%d%%
@@ -114,6 +110,10 @@ Exams       & Midterm 1       & 10\%   \\
 
 \input{expectations}
 
+\section{Pandemic}
+
+\input{covid}
+
 \section{Course Management}
 
 We use several systems to help manage the course
@@ -122,6 +122,10 @@ and for on-line communication.
 \input{email}
 \input{canvas}
 \input{slack}
+
+\section{Final Exam Policy}
+
+\input{final-exams}
 
 \section{Academic Integrity}
 
@@ -133,8 +137,6 @@ and for on-line communication.
 
 \lastupdated
 
-% \printbibliography{}\label{sec:references}
-
 \end{document}
 
 %%% Local Variables:
@@ -142,4 +144,4 @@ and for on-line communication.
 %%% TeX-master: t
 %%% End:
 
-% LocalWords:  sharding lll ORGTBL orgtbl booktabs TBLFM vsum
+% LocalWords:  sharding lll ORGTBL orgtbl booktabs TBLFM vsum MWF NoSQL
